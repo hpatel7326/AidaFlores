@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Brow Lamination, Lash Lift & Korean Lashes in Huntersville, NC | Aida Flores Aesthetics</title>
+<meta name="description" content="Warm, personal brow & lash care in Huntersville, NC. Brow lamination, Korean lash lift, brow wax & tint. Serving Cornelius, Charlotte & Lake Norman." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root { --bg: #F4EEE3; --surface: #FDFAF4; --pink: #E8D5CB; --sage: #B8C5A6; --sage-deep: #8A9C7A; --ink: #3D2F26; --ink-2: #5C4A3F; --ink-soft: #8A7263; --brand: #D18D8D; --brand-deep: #B07474; --line: #E0D5C2; }
+  *,*::before,*::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', system-ui, sans-serif; color: var(--ink-2); background: var(--bg); -webkit-font-smoothing: antialiased; line-height: 1.65; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+  .narrow { max-width: 880px; margin: 0 auto; padding: 0 32px; }
+  h1, h2, h3, h4 { font-family: 'Fraunces', serif; font-weight: 400; color: var(--ink); margin: 0; letter-spacing: -0.01em; }
+  em { font-style: italic; color: var(--brand-deep); }
+
+  .util-bar { background: var(--ink); color: var(--bg); font-size: 12px; padding: 10px 0; }
+  .util-bar .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+  .util-bar a:hover { color: var(--brand); }
+
+  header.site { position: sticky; top: 0; z-index: 100; background: rgba(244, 238, 227, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  header.site .wrap { display: flex; align-items: center; justify-content: space-between; padding: 18px 32px; max-width: 1180px; }
+  .logo { font-family: 'Fraunces', serif; font-size: 26px; font-style: italic; color: var(--ink); }
+  .logo span { font-style: normal; color: var(--brand-deep); }
+  nav.primary { display: flex; gap: 32px; font-size: 15px; color: var(--ink-2); }
+  nav.primary a.active { color: var(--brand-deep); border-bottom: 1px solid var(--brand); padding-bottom: 4px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 26px; font-size: 14px; font-weight: 500; cursor: pointer; border-radius: 999px; transition: all .25s ease; border: 1px solid transparent; font-family: 'DM Sans', sans-serif; }
+  .btn.blush { background: var(--brand); color: #fff; }
+  .btn.blush:hover { background: var(--brand-deep); transform: translateY(-1px); }
+  .btn.ink { background: var(--ink); color: var(--bg); }
+  .btn.outline { border-color: var(--ink); color: var(--ink); background: transparent; }
+  .btn.outline:hover { background: var(--ink); color: var(--bg); }
+  .btn.small { padding: 11px 20px; font-size: 13px; }
+  @media (max-width: 900px) { nav.primary { display: none; } }
+
+  .crumb { padding: 24px 0 0; font-size: 13px; color: var(--ink-soft); }
+  .crumb a { color: var(--ink-soft); }
+  .crumb a:hover { color: var(--brand-deep); }
+  .crumb .sep { margin: 0 10px; opacity: 0.5; }
+  .crumb .cur { color: var(--ink); }
+
+  /* Hero */
+  section.hero { padding: 32px 0 80px; position: relative; overflow: hidden; }
+  .blob { position: absolute; border-radius: 50%; filter: blur(70px); opacity: 0.4; pointer-events: none; }
+  .hero .blob.b1 { width: 460px; height: 460px; background: var(--brand); top: -100px; right: -100px; }
+  .hero .blob.b2 { width: 300px; height: 300px; background: var(--sage); bottom: -100px; left: -80px; opacity: 0.3; }
+  .hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 64px; align-items: center; position: relative; z-index: 1; }
+  @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; gap: 40px; } }
+  .eyebrow { font-family: 'Fraunces', serif; font-style: italic; color: var(--brand-deep); font-size: 16px; margin-bottom: 16px; }
+  h1 { font-size: clamp(40px, 5.5vw, 76px); line-height: 1.05; margin-bottom: 24px; }
+  .hero p.lede { font-size: 18px; color: var(--ink-2); max-width: 520px; margin: 0 0 32px; }
+  .hero .image { aspect-ratio: 4/5; border-radius: 240px 240px 24px 24px; overflow: hidden; background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.4), transparent 50%), linear-gradient(165deg, #E8D5CB 0%, #D18D8D 60%, #A86E6E 100%); position: relative; }
+  .hero .image .badge { position: absolute; top: 20px; right: 20px; width: 92px; height: 92px; background: var(--surface); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-align: center; font-family: 'Fraunces', serif; font-style: italic; font-size: 11px; padding: 8px; line-height: 1.25; color: var(--ink); box-shadow: 0 8px 24px -10px rgba(60,50,40,0.3); }
+  .hero .image .stamp { position: absolute; bottom: 24px; left: 24px; background: rgba(253, 250, 244, 0.92); padding: 14px 18px; border-radius: 16px; backdrop-filter: blur(8px); max-width: 240px; }
+  .hero .image .stamp .small { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brand-deep); margin-bottom: 4px; }
+  .hero .image .stamp .big { font-family: 'Fraunces', serif; font-style: italic; font-size: 17px; color: var(--ink); }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  .trust { padding: 24px 0; }
+  .trust .wrap { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+  .pill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: var(--surface); border-radius: 999px; font-size: 13px; color: var(--ink-2); border: 1px solid var(--line); }
+  .pill .dot { width: 8px; height: 8px; background: var(--sage); border-radius: 50%; }
+
+  section { padding: 80px 0; position: relative; overflow: hidden; }
+  @media (max-width: 700px) { section { padding: 56px 0; } }
+  h2.sec { font-size: clamp(32px, 4.5vw, 52px); line-height: 1.1; max-width: 720px; }
+  .lead { color: var(--ink-2); font-size: 17px; max-width: 600px; margin-top: 18px; }
+
+  /* Services */
+  .services { background: var(--surface); border-radius: 32px 32px 0 0; }
+  .svc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 48px; }
+  @media (max-width: 700px) { .svc-grid { grid-template-columns: 1fr; } }
+  .svc { padding: 28px 30px; background: var(--bg); border-radius: 22px; display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: start; }
+  .svc h3 { font-size: 24px; margin-bottom: 4px; font-weight: 400; }
+  .svc .duration { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brand-deep); margin-bottom: 12px; font-family: 'DM Sans', sans-serif; }
+  .svc .b { font-size: 14px; color: var(--ink-2); margin: 0; }
+  .svc .meta-list { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 13px; color: var(--ink-soft); display: flex; gap: 18px; flex-wrap: wrap; }
+  .svc .meta-list b { color: var(--ink); font-weight: 500; }
+  .svc .price { font-family: 'Fraunces', serif; font-style: italic; color: var(--brand-deep); font-size: 22px; }
+
+  /* Method */
+  .method { background: var(--pink); }
+  .method .blob { width: 380px; height: 380px; background: var(--brand); top: -120px; right: -100px; opacity: 0.4; }
+  .method-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 64px; align-items: center; position: relative; z-index: 1; }
+  @media (max-width: 900px) { .method-grid { grid-template-columns: 1fr; gap: 40px; } }
+  .method .visual { aspect-ratio: 4/5; border-radius: 200px 24px 200px 24px; background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.5), transparent 50%), linear-gradient(160deg, #FDFAF4 0%, #E8D5CB 100%); position: relative; }
+  .method .visual .stamp { position: absolute; bottom: 30px; left: 30px; background: rgba(61, 47, 38, 0.9); color: var(--bg); padding: 18px 22px; border-radius: 18px; max-width: 240px; }
+  .method .visual .stamp .s { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--brand); margin-bottom: 4px; }
+  .method .visual .stamp .big { font-family: 'Fraunces', serif; font-style: italic; font-size: 17px; }
+  .method p { color: var(--ink-2); font-size: 16px; }
+  .method p + p { margin-top: 14px; }
+  .pillars { margin: 32px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .pillar { background: var(--surface); padding: 16px 20px; border-radius: 14px; }
+  .pillar .h { font-family: 'Fraunces', serif; font-style: italic; color: var(--brand-deep); font-size: 16px; margin-bottom: 4px; }
+  .pillar .b { font-size: 13px; color: var(--ink-2); }
+
+  /* Rhythm */
+  .rhythm { background: var(--bg); }
+  .rhythm-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 64px; align-items: center; }
+  @media (max-width: 900px) { .rhythm-grid { grid-template-columns: 1fr; gap: 32px; } }
+  .rhythm h2 { font-size: clamp(32px, 4.5vw, 50px); }
+  .rhythm p { color: var(--ink-2); font-size: 16px; margin: 16px 0 0; }
+  .cadence { margin-top: 28px; display: flex; flex-direction: column; gap: 10px; }
+  .cad-row { display: grid; grid-template-columns: 140px 1fr 70px; gap: 18px; padding: 14px 20px; background: var(--surface); border-radius: 14px; align-items: baseline; font-size: 14px; }
+  .cad-row .name { font-family: 'Fraunces', serif; font-size: 18px; color: var(--ink); }
+  .cad-row .why { color: var(--ink-soft); font-size: 13px; }
+  .cad-row .weeks { font-family: 'Fraunces', serif; font-style: italic; color: var(--brand-deep); font-size: 16px; text-align: right; }
+  .rhythm .image { aspect-ratio: 3/4; border-radius: 200px 24px 24px 24px; background: linear-gradient(165deg, var(--sage) 0%, var(--sage-deep) 100%); position: relative; }
+  .rhythm .image .stamp { position: absolute; top: 24px; left: 24px; background: rgba(253, 250, 244, 0.9); padding: 8px 14px; border-radius: 999px; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); }
+
+  /* Looks */
+  .looks { background: var(--surface); }
+  .looks-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 48px; }
+  @media (max-width: 900px) { .looks-grid { grid-template-columns: repeat(2, 1fr); } }
+  .look { background: var(--bg); border-radius: 20px; overflow: hidden; padding-bottom: 18px; }
+  .look .img { aspect-ratio: 3/4; position: relative; margin: 4px; border-radius: 16px; }
+  .look .img::before { content: attr(data-l); position: absolute; bottom: 12px; left: 12px; background: rgba(253, 250, 244, 0.9); padding: 4px 10px; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); border-radius: 999px; }
+  .look.l1 .img { background: linear-gradient(165deg, var(--brand), var(--brand-deep)); }
+  .look.l2 .img { background: linear-gradient(165deg, #E8D5CB, #C9A188); }
+  .look.l3 .img { background: linear-gradient(165deg, var(--sage), var(--sage-deep)); }
+  .look.l4 .img { background: linear-gradient(165deg, #D18D8D, #E8D5CB); }
+  .look .q { padding: 12px 18px 0; font-family: 'Fraunces', serif; font-style: italic; font-size: 15px; color: var(--ink); }
+
+  /* FAQ */
+  .faq { background: var(--bg); }
+  .faq-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; }
+  @media (max-width: 900px) { .faq-grid { grid-template-columns: 1fr; gap: 32px; } }
+  details { background: var(--surface); border-radius: 18px; margin-bottom: 12px; padding: 22px 26px; cursor: pointer; }
+  details summary { list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: 'Fraunces', serif; font-size: 19px; color: var(--ink); }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::after { content: "+"; color: var(--brand-deep); font-size: 22px; font-family: 'DM Sans', sans-serif; }
+  details[open] summary::after { content: "−"; }
+  details p { margin: 14px 0 0; color: var(--ink-2); font-size: 15px; }
+
+  /* Area */
+  .area { background: var(--pink); }
+  .area .blob { width: 360px; height: 360px; background: var(--brand); bottom: -120px; right: -100px; opacity: 0.5; }
+  .area-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 64px; position: relative; z-index: 1; }
+  @media (max-width: 900px) { .area-grid { grid-template-columns: 1fr; gap: 32px; } }
+  .cities { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 20px; margin-top: 16px; }
+  .cities .it { padding: 12px 18px; background: var(--surface); border-radius: 12px; font-size: 15px; color: var(--ink); }
+
+  /* Final */
+  .final { background: var(--ink); color: var(--bg); text-align: center; }
+  .final .blob { background: var(--brand); width: 460px; height: 460px; top: -180px; right: -180px; opacity: 0.3; }
+  .final .eyebrow { color: var(--brand); }
+  .final h2 { color: var(--bg); font-size: clamp(36px, 5vw, 60px); max-width: 800px; margin: 0 auto 20px; line-height: 1.08; }
+  .final h2 em { color: var(--brand); }
+  .final p { color: rgba(244, 238, 227, 0.75); max-width: 520px; margin: 0 auto 32px; }
+  .final-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; position: relative; z-index: 1; }
+
+  footer.site { background: var(--surface); padding: 56px 0 32px; }
+  .foot-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid var(--line); }
+  @media (max-width: 900px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .foot-grid { grid-template-columns: 1fr; } }
+  footer.site .col h3 { font-family: 'Fraunces', serif; font-style: italic; font-size: 22px; color: var(--ink); margin-bottom: 14px; }
+  footer.site .col h4 { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brand-deep); margin: 0 0 14px; font-weight: 500; }
+  footer.site .col p, footer.site .col li { font-size: 14px; color: var(--ink-2); margin-bottom: 10px; }
+  footer.site .col ul { list-style: none; padding: 0; margin: 0; }
+  .legal { padding-top: 24px; display: flex; justify-content: space-between; font-size: 12px; color: var(--ink-soft); flex-wrap: wrap; }
+
+  .sticky-mobile { display: none; }
+  @media (max-width: 900px) { .sticky-mobile { display: flex; position: fixed; bottom: 14px; left: 14px; right: 14px; z-index: 200; gap: 10px; border-radius: 999px; overflow: hidden; box-shadow: 0 14px 30px -10px rgba(60,50,40,0.4); } .sticky-mobile a { flex: 1; text-align: center; padding: 16px; font-size: 13px; font-weight: 500; } .sticky-mobile .call { background: var(--surface); color: var(--ink); border-radius: 999px 0 0 999px; } .sticky-mobile .book { background: var(--brand); color: #fff; border-radius: 0 999px 999px 0; } }
+
+  .back-link { position: fixed; top: 14px; left: 14px; z-index: 200; background: var(--surface); padding: 8px 16px; border-radius: 999px; font-size: 12px; color: var(--ink); border: 1px solid var(--line); }
+  @media (max-width: 900px) { .back-link { top: auto; bottom: 84px; } }
+</style>
+</head>
+<body>
+
+<a class="back-link" href="index.html">← All concepts</a>
+
+<div class="util-bar">
+  <div class="wrap">
+    <div><span>✦ Huntersville, NC · Lake Norman</span></div>
+    <div><a href="tel:9804322968">(980) 432-2968</a> · <a href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener">@Aidaflores_aesthetics</a></div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <div class="logo"><span>Aida</span> Flores</div>
+    <nav class="primary">
+      <a href="brows-sanctuary.html" class="active">Brows & Lashes</a>
+      <a href="acne-sanctuary.html">Skin</a>
+      <a href="concept-sanctuary.html#facials">Facials</a>
+      <a href="concept-sanctuary.html#about">About</a>
+    </nav>
+    <a class="btn blush small" href="https://www.vagaro.com/aidafloresaesthetics" target="_blank" rel="noopener">Book a visit</a>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="crumb">
+    <a href="concept-sanctuary.html">Home</a><span class="sep">/</span>
+    <span class="cur">Brows & Lashes</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">— the studio's signature</div>
+        <h1>Brows & lashes that finally <em>feel like you</em>.</h1>
+        <p class="lede">Brow lamination, Korean lash lift, brow wax and tint — each one shaped to your features and designed for the soft rhythm of returning every few weeks. In Huntersville, NC, serving Cornelius, Charlotte & Lake Norman.</p>
+        <div class="hero-actions">
+          <a class="btn blush" href="https://www.vagaro.com/aidafloresaesthetics" target="_blank" rel="noopener">Book a brow or lash visit</a>
+          <a class="btn outline" href="#rhythm">Cadence guide ↓</a>
+        </div>
+      </div>
+      <div class="image">
+        <div class="badge">Soft, polished,<br/><em>yours</em></div>
+        <div class="stamp">
+          <div class="small">A note from Aida</div>
+          <div class="big">"Brows that suit your face — not the trend."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap">
+    <span class="pill"><span class="dot"></span>Korean Lash Lift Trained</span>
+    <span class="pill"><span class="dot"></span>Brow Lamination Certified</span>
+    <span class="pill"><span class="dot"></span>1:1 every visit</span>
+    <span class="pill"><span class="dot"></span>500+ five-star reviews</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services">
+  <div class="wrap">
+    <div class="eyebrow">— services & pricing</div>
+    <h2 class="sec">Six services. <em>One pair of hands</em>.</h2>
+    <p class="lead">Each one performed by Aida personally — no rotating providers, no rushed shape mapping, no quick-fix energy.</p>
+
+    <div class="svc-grid">
+      <div class="svc">
+        <div>
+          <h3>Brow Lamination</h3>
+          <div class="duration">60 min · lasts 6–8 weeks</div>
+          <p class="b">The signature service. A chemical-set treatment that gives your brows a brushed-up, polished shape that holds for weeks — without growing them into anything they aren't.</p>
+          <div class="meta-list"><span><b>Add-on:</b> Brow tint <i>+$15</i></span></div>
+        </div>
+        <div class="price">$85</div>
+      </div>
+
+      <div class="svc">
+        <div>
+          <h3>Korean Lash Lift</h3>
+          <div class="duration">75 min · lasts 4–6 weeks</div>
+          <p class="b">A gentler, more elegant curl than a traditional lash lift. Lifts from the root for the look of length and curl, no extensions or strip lashes required.</p>
+          <div class="meta-list"><span><b>Add-on:</b> Lash tint <i>+$15</i></span></div>
+        </div>
+        <div class="price">$95</div>
+      </div>
+
+      <div class="svc">
+        <div>
+          <h3>Classic Lash Lift</h3>
+          <div class="duration">60 min · lasts 4–6 weeks</div>
+          <p class="b">The original. Lifts and curls your natural lashes for a wide-awake, mascara-optional look. A great entry point if it's your first time.</p>
+          <div class="meta-list"><span><b>Add-on:</b> Lash tint <i>+$15</i></span></div>
+        </div>
+        <div class="price">$85</div>
+      </div>
+
+      <div class="svc">
+        <div>
+          <h3>Brow Wax & Shape</h3>
+          <div class="duration">30 min · every 3–4 weeks</div>
+          <p class="b">The clean shape that holds the brow lamination through its cycle. Mapped to your bone structure, never to a trend.</p>
+          <div class="meta-list"><span><b>Pairs with:</b> Tint, Lamination</span></div>
+        </div>
+        <div class="price">$30</div>
+      </div>
+
+      <div class="svc">
+        <div>
+          <h3>Brow Tint</h3>
+          <div class="duration">20 min · lasts 4–6 weeks</div>
+          <p class="b">A semi-permanent tint that adds depth and definition. Tone matched to your hair and skin — never darker than your face can carry.</p>
+          <div class="meta-list"><span><b>Combo:</b> Wax + Tint <i>$50</i></span></div>
+        </div>
+        <div class="price">$25</div>
+      </div>
+
+      <div class="svc">
+        <div>
+          <h3>Lash Tint</h3>
+          <div class="duration">20 min · lasts 4–6 weeks</div>
+          <p class="b">A subtle darkening of your natural lashes — especially flattering on lighter colors. Best as an add-on to a lash lift.</p>
+        </div>
+        <div class="price">$20</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section class="method">
+  <div class="blob"></div>
+  <div class="wrap">
+    <div class="method-grid">
+      <div class="visual">
+        <div class="stamp">
+          <div class="s">The mapping</div>
+          <div class="big">"Shape drawn from your features — not a template."</div>
+        </div>
+      </div>
+      <div>
+        <div class="eyebrow">— what makes the work different</div>
+        <h2 class="sec">Shape, not <em>trend</em>.</h2>
+        <p>Most brow and lash work is performed quickly, from a stock shape, and the result fades into the same look you'd find at any salon. What clients keep coming back for here is the mapping — a slow, custom read on your bone structure, lash growth pattern, and the way your face actually moves.</p>
+        <p>The first visit takes 15 extra minutes for this reason. Every visit after benefits from it.</p>
+        <div class="pillars">
+          <div class="pillar"><div class="h">Custom mapping</div><div class="b">Shape drawn from your features.</div></div>
+          <div class="pillar"><div class="h">Korean-grade product</div><div class="b">Gentler chemistry, better hold.</div></div>
+          <div class="pillar"><div class="h">1:1 every time</div><div class="b">Same hands, every visit.</div></div>
+          <div class="pillar"><div class="h">Honest aftercare</div><div class="b">No 14-step routines.</div></div>
+        </div>
+        <a class="btn ink" href="https://www.vagaro.com/aidafloresaesthetics" target="_blank" rel="noopener">Book a first visit →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RHYTHM -->
+<section class="rhythm" id="rhythm">
+  <div class="wrap">
+    <div class="rhythm-grid">
+      <div>
+        <div class="eyebrow">— the cadence</div>
+        <h2 class="sec">A rhythm worth <em>keeping</em>.</h2>
+        <p>The brow and lash services here are designed to be returned to — the right cadence keeps you in a polished, low-maintenance state without ever having to think about it.</p>
+        <div class="cadence">
+          <div class="cad-row"><div class="name">Brow Lamination</div><div class="why">Set into the brow's growth cycle. Resets shape before regrowth softens it.</div><div class="weeks">6–8w</div></div>
+          <div class="cad-row"><div class="name">Korean Lash Lift</div><div class="why">Matched to your natural lash cycle so a fresh lift carries the look forward.</div><div class="weeks">4–6w</div></div>
+          <div class="cad-row"><div class="name">Brow Wax & Shape</div><div class="why">Keeps the laminated shape clean between resets.</div><div class="weeks">3–4w</div></div>
+          <div class="cad-row"><div class="name">Brow Tint</div><div class="why">Refreshes color before it fully fades. Stack with your wax.</div><div class="weeks">4–6w</div></div>
+          <div class="cad-row"><div class="name">Lash Tint</div><div class="why">Add-on at every lash lift. Keeps tone consistent.</div><div class="weeks">w/ Lift</div></div>
+        </div>
+      </div>
+      <div class="image"><span class="stamp">Studio · Huntersville</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOOKS -->
+<section class="looks">
+  <div class="wrap">
+    <div class="eyebrow">— real clients · real looks</div>
+    <h2 class="sec">Known for being <em>natural</em>.</h2>
+    <p class="lead">Real client work, shared with permission. Soft, polished, distinctly yours — never overdone.</p>
+    <div class="looks-grid">
+      <div class="look l1"><div class="img" data-l="Brow lam · 6wk"></div><div class="q">"Brows that finally suit my face."</div></div>
+      <div class="look l2"><div class="img" data-l="Korean lashes"></div><div class="q">"Mascara-optional, every day."</div></div>
+      <div class="look l3"><div class="img" data-l="Wax + tint"></div><div class="q">"The shape I never knew I had."</div></div>
+      <div class="look l4"><div class="img" data-l="Lift + tint"></div><div class="q">"Lifted, clean — never harsh."</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="wrap">
+    <div class="faq-grid">
+      <div>
+        <div class="eyebrow">— before your first visit</div>
+        <h2 class="sec">Things you might be wondering.</h2>
+        <p style="margin-top: 18px; color: var(--ink-2);">Have a question that isn't here? DM on Instagram or call — Aida responds personally.</p>
+      </div>
+      <div>
+        <details open><summary>How long does brow lamination last?</summary><p>Most clients get 6–8 weeks of hold before the shape starts to soften. We pair lamination with a brow wax & tint every 3–4 weeks in between to keep the look polished.</p></details>
+        <details><summary>Korean lash lift vs. classic lash lift — what's the difference?</summary><p>Korean lifts use a gentler chemistry that lifts from the root for a softer, more "awake" angle. Classic lifts curl the lash itself. Both work; Korean tends to suit more lash types.</p></details>
+        <details><summary>Can I wear makeup after?</summary><p>Skip eye makeup and water for the first 24 hours after a lamination or lift. After that, normal routine is fine.</p></details>
+        <details><summary>I have very thin or sparse brows. Is lamination right for me?</summary><p>Lamination works best on clients who have some brow density to shape. If your brows are very sparse, we'll talk through tint-only options or a slower approach at your first visit.</p></details>
+        <details><summary>How do you decide on a brow shape?</summary><p>I map the brow to your bone structure and natural growth pattern, not a trending shape. We'll talk through what you've tried and build from there.</p></details>
+        <details><summary>I'm new to all of this. Where should I start?</summary><p>Welcome — about half of new clients start here. A first-time brow wax + tint or a classic lash lift is a great introduction. We'll figure out the right cadence together.</p></details>
+        <details><summary>Where is the studio?</summary><p>Huntersville, NC — convenient to Cornelius, Davidson, Mooresville, and greater Charlotte / Lake Norman. Exact address sent in your booking confirmation.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AREA -->
+<section class="area">
+  <div class="blob"></div>
+  <div class="wrap">
+    <div class="area-grid">
+      <div>
+        <div class="eyebrow">— area served</div>
+        <h2 class="sec">Close to home, for the <em>Lake Norman</em> community.</h2>
+        <p style="margin-top: 18px; color: var(--ink-2);">Easy access from north Charlotte and the I-77 communities. Clients drive in from across the area.</p>
+      </div>
+      <div>
+        <div class="cities">
+          <div class="it">Huntersville, NC</div>
+          <div class="it">Cornelius, NC</div>
+          <div class="it">Davidson, NC</div>
+          <div class="it">Mooresville, NC</div>
+          <div class="it">Charlotte, NC</div>
+          <div class="it">Concord, NC</div>
+          <div class="it">Denver, NC</div>
+          <div class="it">Lake Norman</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="final">
+  <div class="blob"></div>
+  <div class="wrap narrow">
+    <div class="eyebrow">— begin</div>
+    <h2>Book your first <em>brow or lash</em> visit.</h2>
+    <p>The first visit takes a few extra minutes for mapping. Every visit after that is the easy rhythm.</p>
+    <div class="final-actions">
+      <a class="btn blush" href="https://www.vagaro.com/aidafloresaesthetics" target="_blank" rel="noopener">Book on Vagaro</a>
+      <a class="btn outline" style="border-color: var(--bg); color: var(--bg);" href="tel:9804322968">Call (980) 432-2968</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="col">
+        <h3>Aida Flores Aesthetics</h3>
+        <p>A licensed esthetician serving Huntersville, Cornelius, Charlotte and the greater Lake Norman area. Brows & lashes, skin care, facials — by appointment.</p>
+      </div>
+      <div class="col"><h4>Brows & Lashes</h4><ul><li>Brow Lamination</li><li>Korean Lash Lift</li><li>Classic Lash Lift</li><li>Brow Wax & Shape</li><li>Brow + Lash Tint</li></ul></div>
+      <div class="col"><h4>Studio</h4><ul><li><a href="concept-sanctuary.html">Home</a></li><li><a href="acne-sanctuary.html">Skin & Acne</a></li><li><a href="concept-sanctuary.html#about">About Aida</a></li><li><a href="https://www.vagaro.com/aidafloresaesthetics/gift-certificates" target="_blank" rel="noopener">Gift Cards</a></li></ul></div>
+      <div class="col"><h4>Visit</h4><ul><li>Huntersville, NC</li><li>Mon–Sat by appt.</li><li><a href="tel:9804322968">(980) 432-2968</a></li><li><a href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener">@Aidaflores_aesthetics</a></li></ul></div>
+    </div>
+    <div class="legal"><span>© 2026 Aida Flores Aesthetics</span><span>concept v1.0</span></div>
+  </div>
+</footer>
+
+<div class="sticky-mobile">
+  <a class="call" href="tel:9804322968">Call</a>
+  <a class="book" href="https://www.vagaro.com/aidafloresaesthetics" target="_blank" rel="noopener">Book a visit</a>
+</div>
+
+</body>
+</html>
