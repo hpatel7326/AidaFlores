@@ -1,0 +1,897 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aida Flores Aesthetics — Corrective Skincare & Acne Specialist in Huntersville, NC</title>
+<meta name="description" content="Face Reality Certified Acne Specialist in Huntersville, NC. Corrective skincare, chemical peels, hydrofacials, brows & lashes by Aida Flores." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #FBF8F3;
+    --surface: #FFFFFF;
+    --cream: #F2EBE0;
+    --taupe: #D6C8B8;
+    --ink: #1F1B17;
+    --ink-2: #2A2520;
+    --ink-soft: #6B5F52;
+    --brand: #D18D8D;
+    --brand-deep: #A86E6E;
+    --line: #E6DFD3;
+  }
+  *,*::before,*::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--ink-2);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+  .wrap.narrow { max-width: 1080px; }
+  h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; letter-spacing: -0.005em; margin: 0; }
+  em { font-style: italic; }
+
+  /* ====== Top utility bar ====== */
+  .util-bar {
+    background: var(--ink);
+    color: var(--cream);
+    font-size: 12px;
+    padding: 8px 0;
+    letter-spacing: 0.06em;
+  }
+  .util-bar .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .util-bar a:hover { color: var(--brand); }
+  .util-bar .left, .util-bar .right { display: flex; gap: 18px; align-items: center; }
+
+  /* ====== Header / Nav ====== */
+  header.site {
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+    background: rgba(251, 248, 243, 0.96);
+  }
+  header.site .wrap {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    gap: 24px;
+  }
+  nav.primary { display: flex; gap: 28px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; }
+  nav.primary a { color: var(--ink-soft); transition: color .2s; }
+  nav.primary a:hover { color: var(--brand-deep); }
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    text-align: center;
+    letter-spacing: 0.06em;
+  }
+  .logo small { display: block; font-size: 10px; letter-spacing: 0.32em; color: var(--brand-deep); margin-top: 2px; text-transform: uppercase; font-family: 'Inter', sans-serif; }
+  .nav-cta { justify-self: end; display: flex; gap: 12px; align-items: center; }
+  .nav-cta .ph { font-size: 13px; color: var(--ink-soft); letter-spacing: 0.05em; }
+  .menu-toggle { display: none; background: none; border: 0; font-size: 22px; cursor: pointer; color: var(--ink); }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 13px 22px;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background .2s, color .2s, border-color .2s;
+    border: 1px solid var(--ink);
+    color: var(--ink);
+    background: transparent;
+    font-family: 'Inter', sans-serif;
+  }
+  .btn:hover { background: var(--ink); color: var(--cream); }
+  .btn.solid { background: var(--ink); color: var(--cream); }
+  .btn.solid:hover { background: var(--brand-deep); border-color: var(--brand-deep); }
+  .btn.blush { background: var(--brand); color: #fff; border-color: var(--brand); }
+  .btn.blush:hover { background: var(--brand-deep); border-color: var(--brand-deep); }
+  .btn.small { padding: 10px 16px; font-size: 11px; }
+
+  @media (max-width: 900px) {
+    header.site .wrap { grid-template-columns: auto 1fr auto; }
+    nav.primary { display: none; }
+    .nav-cta .ph { display: none; }
+    .menu-toggle { display: inline-flex; order: -1; }
+    .logo { text-align: left; }
+  }
+
+  /* ====== Hero ====== */
+  section.hero {
+    padding: 80px 0 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .hero h1 {
+    font-size: clamp(46px, 6.5vw, 92px);
+    line-height: 1.03;
+  }
+  .hero h1 em { color: var(--brand-deep); }
+  .hero .eyebrow {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: var(--brand-deep);
+    margin-bottom: 22px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+  }
+  .hero p.lede {
+    font-size: 17px;
+    color: var(--ink-soft);
+    max-width: 460px;
+    margin: 28px 0 36px;
+  }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .hero .image {
+    aspect-ratio: 4/5;
+    background:
+      linear-gradient(180deg, rgba(31,27,23,0) 60%, rgba(31,27,23,0.18) 100%),
+      radial-gradient(circle at 30% 30%, rgba(255,255,255,0.4) 0%, transparent 50%),
+      linear-gradient(135deg, #D18D8D 0%, #B07474 60%, #8B5757 100%);
+    position: relative;
+  }
+  .hero .image .caption {
+    position: absolute;
+    bottom: 24px; left: 24px; right: 24px;
+    color: rgba(255,255,255,0.9);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    border-top: 1px solid rgba(255,255,255,0.4);
+    padding-top: 10px;
+    letter-spacing: 0.04em;
+  }
+  .hero-pin {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    background: rgba(255,255,255,0.92);
+    padding: 6px 12px;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-family: 'Inter', sans-serif;
+    border-radius: 999px;
+    backdrop-filter: blur(6px);
+  }
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    section.hero { padding: 48px 0 60px; }
+    .hero .image { aspect-ratio: 4/5; max-height: 540px; }
+  }
+
+  /* ====== Trust strip ====== */
+  .trust {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 28px 0;
+    background: var(--cream);
+  }
+  .trust .wrap { display: flex; align-items: center; justify-content: space-between; gap: 28px; flex-wrap: wrap; }
+  .trust .item { display: flex; align-items: center; gap: 10px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); }
+  .trust .dot { width: 8px; height: 8px; background: var(--brand); border-radius: 50%; }
+
+  /* ====== Section base ====== */
+  section { padding: 100px 0; }
+  .label {
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--brand-deep);
+    margin-bottom: 18px;
+    font-weight: 500;
+  }
+  h2.section-h {
+    font-size: clamp(36px, 4.5vw, 56px);
+    line-height: 1.08;
+    max-width: 760px;
+  }
+  h2.section-h em { color: var(--brand-deep); }
+  .section-sub { color: var(--ink-soft); max-width: 580px; font-size: 16px; margin-top: 18px; }
+  @media (max-width: 700px) { section { padding: 64px 0; } }
+
+  /* ====== Philosophy ====== */
+  .philosophy {
+    background: var(--bg);
+  }
+  .philosophy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .philosophy h2 { font-size: clamp(34px, 4.2vw, 52px); line-height: 1.1; }
+  .philosophy p { color: var(--ink-soft); font-size: 16px; }
+  .philosophy p + p { margin-top: 16px; }
+  .signature {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 28px;
+    color: var(--brand-deep);
+    margin-top: 28px;
+    display: inline-block;
+    border-bottom: 1px solid var(--taupe);
+    padding-bottom: 6px;
+  }
+  @media (max-width: 900px) { .philosophy-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+  /* ====== Services ====== */
+  .services { background: var(--cream); }
+  .services-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; margin-bottom: 56px; flex-wrap: wrap; }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr; } }
+  .service-card {
+    background: var(--bg);
+    padding: 36px 32px;
+    display: flex; flex-direction: column;
+    border: 1px solid var(--line);
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .service-card:hover { transform: translateY(-4px); box-shadow: 0 24px 50px -36px rgba(31,27,23,0.3); }
+  .service-card .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--brand-deep);
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+  .service-card h3 { font-size: 28px; margin-bottom: 12px; }
+  .service-card ul { list-style: none; padding: 0; margin: 16px 0 28px; }
+  .service-card li {
+    padding: 8px 0;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+    color: var(--ink-soft);
+    display: flex; justify-content: space-between; align-items: baseline;
+  }
+  .service-card li:last-child { border-bottom: 1px solid var(--line); }
+  .service-card li .from { font-size: 12px; color: var(--brand-deep); letter-spacing: 0.08em; text-transform: uppercase; }
+  .service-card .more { margin-top: auto; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 2px; align-self: flex-start; }
+
+  /* ====== Feature: Face Reality ====== */
+  .feature { background: var(--bg); }
+  .feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .feature .image {
+    aspect-ratio: 4/5;
+    background:
+      linear-gradient(135deg, var(--cream) 0%, var(--taupe) 100%);
+    position: relative;
+  }
+  .feature .image::before {
+    content: "FACE REALITY";
+    position: absolute;
+    top: 24px; left: 24px;
+    font-size: 10px;
+    letter-spacing: 0.32em;
+    color: var(--ink);
+    background: rgba(255,255,255,0.9);
+    padding: 4px 10px;
+  }
+  .feature .image::after {
+    content: "";
+    position: absolute;
+    inset: 40% 20% 8% 8%;
+    background: radial-gradient(circle at 30% 40%, #D18D8D, #8B5757);
+    border-radius: 4px;
+  }
+  .feature h2 { font-size: clamp(36px, 4.5vw, 56px); margin-bottom: 24px; }
+  .feature p { color: var(--ink-soft); font-size: 16px; margin: 0 0 16px; }
+  .pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 32px; margin: 32px 0; }
+  .pillar { padding-top: 16px; border-top: 1px solid var(--line); }
+  .pillar .h { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--ink); margin-bottom: 2px; }
+  .pillar .b { font-size: 13px; color: var(--ink-soft); }
+  @media (max-width: 900px) { .feature-grid { grid-template-columns: 1fr; gap: 40px; } .feature .image { max-height: 500px; } }
+
+  /* ====== Before / After ====== */
+  .ba { background: var(--ink); color: var(--cream); }
+  .ba .label { color: var(--brand); }
+  .ba h2.section-h { color: var(--cream); }
+  .ba h2.section-h em { color: var(--brand); }
+  .ba .section-sub { color: rgba(242, 235, 224, 0.7); }
+  .ba-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 56px;
+  }
+  @media (max-width: 900px) { .ba-grid { grid-template-columns: 1fr; } }
+  .ba-card { background: #2A2520; }
+  .ba-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    aspect-ratio: 2/1.2;
+    position: relative;
+  }
+  .ba-pair > div {
+    position: relative;
+    overflow: hidden;
+  }
+  .ba-pair > div::before {
+    content: attr(data-label);
+    position: absolute;
+    top: 12px; left: 12px;
+    background: rgba(0,0,0,0.6);
+    color: var(--cream);
+    padding: 3px 9px;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    z-index: 2;
+  }
+  .ba-pair .before { background: linear-gradient(160deg, #8B7068 0%, #6B5550 100%); }
+  .ba-pair .after { background: linear-gradient(160deg, #E8C9B8 0%, #D18D8D 100%); }
+  .ba-card .meta {
+    padding: 20px 24px 24px;
+    display: flex; justify-content: space-between; align-items: center; gap: 12px;
+    border-top: 1px solid #3a3530;
+  }
+  .ba-card .meta .who { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--cream); font-size: 18px; }
+  .ba-card .meta .when { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--brand); }
+  .ba-foot { margin-top: 40px; font-size: 13px; color: rgba(242, 235, 224, 0.6); text-align: center; font-style: italic; font-family: 'Cormorant Garamond', serif; }
+
+  /* ====== About ====== */
+  .about { background: var(--bg); }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .about .portrait {
+    aspect-ratio: 4/5;
+    background:
+      linear-gradient(180deg, transparent 60%, rgba(31,27,23,0.18)),
+      radial-gradient(circle at 40% 30%, rgba(255,255,255,0.5), transparent 50%),
+      linear-gradient(160deg, #E8D5CB 0%, #D18D8D 60%, #A86E6E 100%);
+    position: relative;
+  }
+  .about .portrait .frame {
+    position: absolute; inset: 0; border: 1px solid var(--taupe); transform: translate(20px, 20px);
+    pointer-events: none;
+  }
+  .about h2 { font-size: clamp(36px, 4.5vw, 56px); margin-bottom: 24px; }
+  .about p { color: var(--ink-soft); font-size: 16px; margin: 0 0 16px; }
+  .about .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 32px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 24px 0; }
+  .about .stat .n { font-family: 'Cormorant Garamond', serif; font-size: 34px; color: var(--brand-deep); line-height: 1; }
+  .about .stat .l { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft); margin-top: 6px; }
+  @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; gap: 32px; } .about .portrait { max-height: 460px; } }
+
+  /* ====== Testimonials ====== */
+  .testimonials { background: var(--cream); }
+  .test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 56px; }
+  @media (max-width: 900px) { .test-grid { grid-template-columns: 1fr; } }
+  .test {
+    padding: 40px 32px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    position: relative;
+  }
+  .test .q { font-family: 'Cormorant Garamond', serif; font-size: 64px; color: var(--brand); line-height: 0.6; position: absolute; top: 24px; right: 24px; opacity: 0.4; }
+  .test blockquote { margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 22px; line-height: 1.4; color: var(--ink); }
+  .test .who { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 13px; letter-spacing: 0.06em; color: var(--ink-soft); display: flex; justify-content: space-between; }
+  .test .who b { color: var(--ink); font-weight: 500; }
+
+  /* ====== Instagram ====== */
+  .ig { background: var(--bg); padding-bottom: 60px; }
+  .ig-head { text-align: center; }
+  .ig-head h2 { font-size: clamp(32px, 4vw, 48px); }
+  .ig-head .handle { color: var(--brand-deep); font-family: 'Inter', sans-serif; font-size: 14px; letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-top: 14px; }
+  .ig-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; margin-top: 48px; }
+  @media (max-width: 900px) { .ig-grid { grid-template-columns: repeat(3, 1fr); } }
+  .ig-tile { aspect-ratio: 1; position: relative; }
+  .ig-tile:nth-child(1) { background: linear-gradient(135deg, #D18D8D 0%, #B07474 100%); }
+  .ig-tile:nth-child(2) { background: linear-gradient(135deg, #E8D5CB 0%, #C9A188 100%); }
+  .ig-tile:nth-child(3) { background: linear-gradient(135deg, #F2EBE0 0%, #D6C8B8 100%); }
+  .ig-tile:nth-child(4) { background: linear-gradient(135deg, #A86E6E 0%, #6B5F52 100%); }
+  .ig-tile:nth-child(5) { background: linear-gradient(135deg, #D6C8B8 0%, #B0A290 100%); }
+  .ig-tile:nth-child(6) { background: linear-gradient(135deg, #D18D8D 0%, #E8D5CB 100%); }
+
+  /* ====== FAQ ====== */
+  .faq { background: var(--cream); }
+  .faq-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 80px; }
+  @media (max-width: 900px) { .faq-grid { grid-template-columns: 1fr; gap: 32px; } }
+  .faq-list { border-top: 1px solid var(--taupe); }
+  details {
+    border-bottom: 1px solid var(--taupe);
+    padding: 24px 0;
+    cursor: pointer;
+  }
+  details summary {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--ink);
+  }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::after {
+    content: "+";
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    color: var(--brand-deep);
+    font-weight: 300;
+    transition: transform .2s;
+  }
+  details[open] summary::after { content: "−"; }
+  details p { color: var(--ink-soft); margin: 14px 0 0; font-size: 15px; max-width: 720px; }
+
+  /* ====== Final CTA ====== */
+  .final {
+    background: linear-gradient(160deg, #F2EBE0 0%, #D6C8B8 100%);
+    text-align: center;
+  }
+  .final h2 { font-size: clamp(40px, 5vw, 68px); line-height: 1.05; max-width: 800px; margin: 0 auto 24px; }
+  .final h2 em { color: var(--brand-deep); }
+  .final p { color: var(--ink-soft); max-width: 540px; margin: 0 auto 36px; font-size: 16px; }
+  .final-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+
+  /* ====== Footer ====== */
+  footer.site { background: var(--ink); color: var(--cream); padding: 80px 0 32px; }
+  footer.site h3 { font-family: 'Cormorant Garamond', serif; color: var(--cream); font-size: 26px; margin-bottom: 24px; }
+  .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 56px; border-bottom: 1px solid #3a3530; }
+  @media (max-width: 900px) { .foot-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+  @media (max-width: 600px) { .foot-grid { grid-template-columns: 1fr; } }
+  footer.site .col h4 { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--brand); margin: 0 0 18px; }
+  footer.site .col ul { list-style: none; padding: 0; margin: 0; }
+  footer.site .col li { margin-bottom: 10px; font-size: 14px; color: rgba(242, 235, 224, 0.78); }
+  footer.site .col li a:hover { color: var(--brand); }
+  footer.site .col p { font-size: 14px; color: rgba(242, 235, 224, 0.78); margin: 0 0 12px; }
+  .legal { padding-top: 28px; display: flex; justify-content: space-between; font-size: 12px; color: rgba(242, 235, 224, 0.5); flex-wrap: wrap; gap: 12px; }
+
+  /* Sticky mobile CTA */
+  .sticky-mobile { display: none; }
+  @media (max-width: 900px) {
+    .sticky-mobile {
+      display: flex;
+      position: fixed;
+      bottom: 12px; left: 12px; right: 12px;
+      z-index: 200;
+      gap: 8px;
+      box-shadow: 0 12px 30px -10px rgba(0,0,0,0.35);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .sticky-mobile a {
+      flex: 1;
+      text-align: center;
+      padding: 16px;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    .sticky-mobile a.book { background: var(--ink); color: var(--cream); }
+    .sticky-mobile a.call { background: var(--brand); color: #fff; }
+  }
+
+  /* Back link */
+  .back-link {
+    position: fixed;
+    top: 12px; left: 12px;
+    z-index: 200;
+    background: rgba(255,255,255,0.92);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--line);
+  }
+  @media (max-width: 900px) { .back-link { top: auto; bottom: 80px; } }
+</style>
+</head>
+<body>
+
+<a class="back-link" href="index.html">← All concepts</a>
+
+<div class="util-bar">
+  <div class="wrap">
+    <div class="left">
+      <span>Huntersville, NC</span>
+      <span>Mon–Sat by appointment</span>
+    </div>
+    <div class="right">
+      <a href="tel:9804322968">(980) 432-2968</a>
+      <a href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.vagaro.com/aidafloresaesthetics/gift-certificates" target="_blank" rel="noopener">Gift cards</a>
+    </div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <button class="menu-toggle" aria-label="Menu">☰</button>
+    <nav class="primary">
+      <a href="acne-atelier.html">Acne & Corrective</a>
+      <a href="#brows">Brows & Lashes</a>
+      <a href="#facials">Facials</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="logo">Aida Flores<small>Aesthetics</small></div>
+    <div class="nav-cta">
+      <span class="ph">(980) 432-2968</span>
+      <a class="btn solid small" href="https://www.vagaro.com/aidafloresaesthetics" target="_blank" rel="noopener">Book</a>
+    </div>
+  </div>
+</header>
+
+<!-- ====== HERO ====== -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Face Reality Certified · Huntersville, NC</div>
+        <h1>Corrective skincare, <em>truly personal.</em></h1>
+        <p class="lede">A small studio for clients who want real results — guided by an esthetician who treats skin as a relationship, not a transaction. Acne. Hydrofacials. Chemical peels. Brows & lashes.</p>
+        <div class="hero-actions">
+          <a class="btn solid" href="https://www.vagaro.com/aidafloresaesthetics" target="_blank" rel="noopener">Begin your skin journey</a>
+          <a class="btn" href="acne-atelier.html">Acne consultations →</a>
+        </div>
+      </div>
+      <div class="image">
+        <span class="hero-pin">Studio · Huntersville, NC · Lake Norman</span>
+        <div class="caption">"Quiet, considered care for skin that's tired of guessing."</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap">
+    <div class="item"><span class="dot"></span>Face Reality Acne Specialist</div>
+    <div class="item"><span class="dot"></span>Licensed Esthetician — North Carolina</div>
+    <div class="item"><span class="dot"></span>Hydrofacial Certified</div>
+    <div class="item"><span class="dot"></span>Korean Lash Lift Trained</div>
+    <div class="item"><span class="dot"></span>500+ five-star reviews</div>
+  </div>
+</div>
+
+<!-- ====== PHILOSOPHY ====== -->
+<section class="philosophy">
+  <div class="wrap">
+    <div class="philosophy-grid">
+      <div>
+        <div class="label">Our philosophy</div>
+        <h2>Skin that lasts is built, <em>not bought.</em></h2>
+      </div>
+      <div>
+        <p>Most skincare promises a transformation in a single visit. Real correction — the kind that clears stubborn acne or rebuilds barrier-damaged skin — takes a plan, a partner, and time.</p>
+        <p>That's what this studio is. A quiet place to figure out what your skin actually needs, work through it together, and learn to maintain the results yourself. No upselling. No 14-step routines you'll never follow. Just careful, evidence-led care.</p>
+        <div class="signature">— Aida</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SERVICES OVERVIEW ====== -->
+<section class="services" id="facials">
+  <div class="wrap">
+    <div class="services-head">
+      <div>
+        <div class="label">Treatments</div>
+        <h2 class="section-h">Care, organized around <em>what your skin is asking for.</em></h2>
+      </div>
+      <a class="btn" href="#full-menu">Full service menu →</a>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="num">01 — Corrective</div>
+        <h3>Acne & Corrective Skincare</h3>
+        <p style="margin:0;font-size:14px;color:var(--ink-soft);">For active acne, post-acne marks, congestion, and barrier repair.</p>
+        <ul>
+          <li>Face Reality Acne Program <span class="from">Consult required</span></li>
+          <li>Custom Chemical Peel <span class="from">From $95</span></li>
+          <li>Hydrofacial <span class="from">From $140</span></li>
+          <li>Dermaplane <span class="from">From $75</span></li>
+        </ul>
+        <a class="more" href="acne-atelier.html">Explore acne care →</a>
+      </div>
+
+      <div class="service-card" id="brows">
+        <div class="num">02 — Maintenance</div>
+        <h3>Brows & Lashes</h3>
+        <p style="margin:0;font-size:14px;color:var(--ink-soft);">Natural enhancement built around your features — designed to be repeated.</p>
+        <ul>
+          <li>Brow Lamination <span class="from">From $85</span></li>
+          <li>Korean Lash Lift <span class="from">From $95</span></li>
+          <li>Brow Wax & Shape <span class="from">From $30</span></li>
+          <li>Brow Tint <span class="from">From $25</span></li>
+        </ul>
+        <a class="more" href="#brows-lashes">Explore brows & lashes →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="num">03 — Relaxation</div>
+        <h3>Signature Facials</h3>
+        <p style="margin:0;font-size:14px;color:var(--ink-soft);">Restorative facials that maintain healthy, balanced skin between corrective work.</p>
+        <ul>
+          <li>Signature Facial <span class="from">From $110</span></li>
+          <li>Pamper Me Facial <span class="from">From $140</span></li>
+          <li>Express Glow <span class="from">From $75</span></li>
+          <li>Add-on: LED Therapy <span class="from">+$25</span></li>
+        </ul>
+        <a class="more" href="#facials-detail">Explore facials →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====== FEATURED: FACE REALITY ====== -->
+<section class="feature">
+  <div class="wrap">
+    <div class="feature-grid">
+      <div class="image"></div>
+      <div>
+        <div class="label">The Face Reality Acne Program</div>
+        <h2>For clients who've <em>tried everything.</em></h2>
+        <p>If you've cycled through prescriptions, drugstore routines, and well-meaning advice from friends — and you're still breaking out — the Face Reality Acne Program is designed for you. It's a 90-day, esthetician-guided protocol that combines clinical-grade product, in-studio treatments, and weekly accountability.</p>
+        <p>Most clients see meaningful clearing within 12 weeks. Many are fully clear by week 16. We take a small number of acne clients at a time so each plan gets the attention it actually requires.</p>
+        <div class="pillars">
+          <div class="pillar"><div class="h">Consultation</div><div class="b">Full skin history, lifestyle, and trigger mapping.</div></div>
+          <div class="pillar"><div class="h">Custom protocol</div><div class="b">Personalized home routine, adjusted at every visit.</div></div>
+          <div class="pillar"><div class="h">Bi-weekly check-ins</div><div class="b">In-studio treatments paced to your skin's response.</div></div>
+          <div class="pillar"><div class="h">Long-term clearing</div><div class="b">A maintenance plan you can actually keep up.</div></div>
+        </div>
+        <a class="btn solid" href="acne-atelier.html">Book a consultation →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== BEFORE / AFTER ====== -->
+<section class="ba">
+  <div class="wrap">
+    <div class="label">Real clients · Real timelines</div>
+    <h2 class="section-h">Transformations from <em>actual clients</em>, in their own time.</h2>
+    <p class="section-sub">Every before/after below was taken from a Face Reality client. No filters, no retouching. Names are first-name only and shared with permission.</p>
+
+    <div class="ba-grid">
+      <article class="ba-card">
+        <div class="ba-pair">
+          <div class="before" data-label="Week 0"></div>
+          <div class="after" data-label="Week 14"></div>
+        </div>
+        <div class="meta">
+          <div class="who">Lauren, 27</div>
+          <div class="when">Cystic acne · 14 wk</div>
+        </div>
+      </article>
+
+      <article class="ba-card">
+        <div class="ba-pair">
+          <div class="before" data-label="Week 0"></div>
+          <div class="after" data-label="Week 12"></div>
+        </div>
+        <div class="meta">
+          <div class="who">Maddie, 19</div>
+          <div class="when">Hormonal acne · 12 wk</div>
+        </div>
+      </article>
+
+      <article class="ba-card">
+        <div class="ba-pair">
+          <div class="before" data-label="Week 0"></div>
+          <div class="after" data-label="Week 16"></div>
+        </div>
+        <div class="meta">
+          <div class="who">Brianna, 34</div>
+          <div class="when">Adult acne + PIH · 16 wk</div>
+        </div>
+      </article>
+    </div>
+    <div class="ba-foot">More transformations available during in-studio consultation.</div>
+  </div>
+</section>
+
+<!-- ====== ABOUT ====== -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="portrait"><div class="frame"></div></div>
+      <div>
+        <div class="label">About Aida</div>
+        <h2>A skincare partner, <em>not a salesperson.</em></h2>
+        <p>I'm Aida — licensed esthetician, Face Reality Certified Acne Specialist, and the only person you'll see in this studio. I built this practice because I wanted to do skincare a different way: slower, smaller, and grounded in the relationship between a person and their skin.</p>
+        <p>Most of my clients come to me through word of mouth, and most stay for years. That isn't an accident. It's because I treat your skin the way I'd want mine treated — with honesty, patience, and a long view.</p>
+        <div class="stats">
+          <div class="stat"><div class="n">8+</div><div class="l">Years in practice</div></div>
+          <div class="stat"><div class="n">500+</div><div class="l">Clients cared for</div></div>
+          <div class="stat"><div class="n">1:1</div><div class="l">Every appointment</div></div>
+        </div>
+        <a class="btn" href="#contact">Meet Aida →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== TESTIMONIALS ====== -->
+<section class="testimonials">
+  <div class="wrap">
+    <div class="label">In their words</div>
+    <h2 class="section-h">What clients say after <em>their first season here.</em></h2>
+
+    <div class="test-grid">
+      <div class="test">
+        <div class="q">"</div>
+        <blockquote>I'd been to dermatologists for years. After 12 weeks with Aida, my skin is clearer than it's ever been — and I finally understand <em>why</em>.</blockquote>
+        <div class="who"><b>Lauren H.</b><span>Face Reality client</span></div>
+      </div>
+      <div class="test">
+        <div class="q">"</div>
+        <blockquote>It feels like a real conversation. She remembers everything from last visit, asks about my routine, and adjusts as we go. That's so rare.</blockquote>
+        <div class="who"><b>Brianna M.</b><span>Hydrofacial regular</span></div>
+      </div>
+      <div class="test">
+        <div class="q">"</div>
+        <blockquote>I come every six weeks for a lash lift and brow lamination. It's the only beauty appointment I never reschedule.</blockquote>
+        <div class="who"><b>Sarah K.</b><span>Brows & lashes</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== INSTAGRAM ====== -->
+<section class="ig">
+  <div class="wrap">
+    <div class="ig-head">
+      <div class="label">From the studio</div>
+      <h2>@Aidaflores_aesthetics</h2>
+      <span class="handle">Follow for transformations, education & studio days</span>
+    </div>
+    <div class="ig-grid">
+      <a class="ig-tile" href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener" aria-label="Instagram post"></a>
+      <a class="ig-tile" href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener" aria-label="Instagram post"></a>
+      <a class="ig-tile" href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener" aria-label="Instagram post"></a>
+      <a class="ig-tile" href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener" aria-label="Instagram post"></a>
+      <a class="ig-tile" href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener" aria-label="Instagram post"></a>
+      <a class="ig-tile" href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener" aria-label="Instagram post"></a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FAQ ====== -->
+<section class="faq">
+  <div class="wrap">
+    <div class="faq-grid">
+      <div>
+        <div class="label">Common questions</div>
+        <h2 class="section-h">Before you book.</h2>
+        <p class="section-sub">If you don't see your question here, send a DM on Instagram or call the studio — Aida answers directly.</p>
+      </div>
+      <div class="faq-list">
+        <details open>
+          <summary>How does the Face Reality Acne Program work?</summary>
+          <p>It starts with a 60-minute consultation where we map your skin's history, triggers, and current state. From there, I build a custom home-care routine and we meet every two weeks for in-studio treatments. Most clients see meaningful clearing within 90 days, with full results around week 16.</p>
+        </details>
+        <details>
+          <summary>Do you take walk-ins?</summary>
+          <p>No — every visit is booked in advance so you have my full attention. The fastest way to schedule is through Vagaro, but you can also call or DM and I'll get back to you within a business day.</p>
+        </details>
+        <details>
+          <summary>Where is the studio located?</summary>
+          <p>The studio is in Huntersville, North Carolina — convenient to Cornelius, Davidson, Mooresville, and greater Charlotte / Lake Norman. Exact address and parking details are sent in your booking confirmation.</p>
+        </details>
+        <details>
+          <summary>Are chemical peels safe for my skin?</summary>
+          <p>The peels I use are professional-grade and prescribed based on your skin's tolerance, not a one-size-fits-all menu. We always start gentle and progress only when your barrier is ready. If it isn't, we wait.</p>
+        </details>
+        <details>
+          <summary>How often should I come in for a facial?</summary>
+          <p>For corrective work, every 2 weeks. For maintenance facials and brows/lashes, every 4–6 weeks is the sweet spot. We'll figure out the right cadence at your first visit.</p>
+        </details>
+        <details>
+          <summary>Do you sell gift cards?</summary>
+          <p>Yes — purchasable instantly through Vagaro. They're delivered by email and can be used for any service.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FINAL CTA ====== -->
+<section class="final" id="contact">
+  <div class="wrap narrow">
+    <div class="label">Begin</div>
+    <h2>Your skin has been <em>waiting</em> for the right partner.</h2>
+    <p>Book a consultation, a single treatment, or a brow/lash appointment. The first step is the same: a quiet conversation about what your skin actually needs.</p>
+    <div class="final-actions">
+      <a class="btn solid" href="https://www.vagaro.com/aidafloresaesthetics" target="_blank" rel="noopener">Book on Vagaro</a>
+      <a class="btn" href="tel:9804322968">Call (980) 432-2968</a>
+      <a class="btn blush" href="https://www.vagaro.com/aidafloresaesthetics/gift-certificates" target="_blank" rel="noopener">Gift a session</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="col">
+        <h3>Aida Flores Aesthetics</h3>
+        <p>A small, intentional skincare studio in Huntersville, North Carolina. Corrective care, brows & lashes, and relaxation facials — by appointment only.</p>
+        <p style="margin-top:18px;"><a href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener" style="color:var(--brand);">@Aidaflores_aesthetics →</a></p>
+      </div>
+      <div class="col">
+        <h4>Treatments</h4>
+        <ul>
+          <li><a href="acne-atelier.html">Acne & Corrective</a></li>
+          <li><a href="#">Chemical Peels</a></li>
+          <li><a href="#">Hydrofacial</a></li>
+          <li><a href="#">Brows & Lashes</a></li>
+          <li><a href="#">Signature Facials</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Studio</h4>
+        <ul>
+          <li><a href="#about">About Aida</a></li>
+          <li><a href="#">Before & After</a></li>
+          <li><a href="#">Reviews</a></li>
+          <li><a href="https://www.vagaro.com/aidafloresaesthetics/gift-certificates" target="_blank" rel="noopener">Gift Cards</a></li>
+          <li><a href="#">Skin Journal</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Visit</h4>
+        <ul>
+          <li>Huntersville, NC</li>
+          <li>Mon–Sat by appointment</li>
+          <li><a href="tel:9804322968">(980) 432-2968</a></li>
+          <li><a href="https://www.vagaro.com/aidafloresaesthetics" target="_blank" rel="noopener">Book on Vagaro</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© 2026 Aida Flores Aesthetics · Huntersville, NC</span>
+      <span>Site by — concept v1.0</span>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-mobile">
+  <a class="call" href="tel:9804322968">Call</a>
+  <a class="book" href="https://www.vagaro.com/aidafloresaesthetics" target="_blank" rel="noopener">Book on Vagaro</a>
+</div>
+
+</body>
+</html>

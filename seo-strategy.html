@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SEO Strategy & Local Roadmap · Aida Flores Aesthetics</title>
+<meta name="description" content="Local SEO strategy, keyword map, page hierarchy, and content roadmap for Aida Flores Aesthetics — serving Huntersville, Cornelius, Charlotte, and Lake Norman." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root { --bg: #F8F5F0; --surface: #FFFFFF; --ink: #1E1A16; --ink-soft: #5C534B; --brand: #D18D8D; --brand-deep: #A86E6E; --line: #E6DFD5; --sage: #B8C5A6; --gold: #C9A876; }
+  *,*::before,*::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; line-height: 1.6; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+  .narrow { max-width: 880px; margin: 0 auto; padding: 0 32px; }
+  h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; margin: 0; letter-spacing: -0.005em; }
+  em { font-style: italic; color: var(--brand-deep); }
+  code { font-family: 'JetBrains Mono', monospace; font-size: 13px; background: var(--surface); padding: 1px 7px; border: 1px solid var(--line); border-radius: 3px; }
+
+  header.top { background: var(--surface); border-bottom: 1px solid var(--line); padding: 20px 0; }
+  header.top .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+  .brandmark { font-family: 'Cormorant Garamond', serif; font-size: 20px; }
+  .brandmark span { color: var(--brand-deep); }
+  .back { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-soft); }
+  .back:hover { color: var(--brand-deep); }
+
+  .intro { padding: 80px 0 56px; }
+  .intro .label { font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--brand-deep); margin-bottom: 18px; font-weight: 500; }
+  .intro h1 { font-size: clamp(40px, 5.5vw, 64px); line-height: 1.05; margin-bottom: 20px; }
+  .intro p { font-size: 17px; color: var(--ink-soft); max-width: 720px; }
+  .intro p + p { margin-top: 12px; }
+
+  .toc { background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 24px 28px; margin-top: 40px; }
+  .toc .t { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 14px; font-weight: 500; }
+  .toc ol { margin: 0; padding-left: 20px; columns: 2; column-gap: 32px; }
+  @media (max-width: 700px) { .toc ol { columns: 1; } }
+  .toc li { margin-bottom: 6px; font-size: 14px; }
+  .toc a { color: var(--ink); }
+  .toc a:hover { color: var(--brand-deep); }
+
+  section { padding: 64px 0; border-top: 1px solid var(--line); }
+  section h2 { font-size: clamp(28px, 3.5vw, 40px); margin-bottom: 12px; }
+  section .desc { color: var(--ink-soft); max-width: 720px; margin-bottom: 32px; font-size: 16px; }
+  section h3 { font-size: 24px; margin: 40px 0 16px; }
+
+  /* Keyword map */
+  .kw-section { background: var(--surface); border: 1px solid var(--line); margin-bottom: 16px; }
+  .kw-section .head { padding: 22px 28px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .kw-section h3 { font-size: 24px; margin: 0; }
+  .kw-section .meta { display: flex; gap: 12px; align-items: center; }
+  .priority { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; padding: 4px 10px; font-weight: 600; }
+  .priority.p1 { background: var(--brand); color: #fff; }
+  .priority.p2 { background: var(--gold); color: var(--ink); }
+  .priority.p3 { background: var(--sage); color: var(--ink); }
+  .kw-section .body { padding: 22px 28px; }
+  .kw-section .body > .lbl { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 12px; font-weight: 500; }
+  .kw-list { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .kw { display: inline-flex; align-items: center; padding: 6px 12px; background: var(--bg); border: 1px solid var(--line); font-size: 13px; border-radius: 999px; }
+  .kw.primary { background: #FBF1F1; border-color: #E8C4C4; color: var(--brand-deep); font-weight: 500; }
+  .kw-section .body p { color: var(--ink-soft); font-size: 14px; margin: 0; }
+  .kw-section .body p + p { margin-top: 8px; }
+  .kw-section .target { padding: 16px 28px; background: var(--bg); border-top: 1px solid var(--line); font-size: 13px; color: var(--ink-soft); display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .kw-section .target b { color: var(--ink); font-weight: 500; }
+
+  /* Hierarchy tree */
+  .tree { background: var(--surface); border: 1px solid var(--line); padding: 32px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--ink); line-height: 1.7; overflow-x: auto; }
+  .tree .h1 { font-family: 'Cormorant Garamond', serif; color: var(--brand-deep); font-size: 18px; font-style: italic; margin-right: 8px; }
+  .tree .url { color: var(--ink-soft); }
+  .tree .new { background: #FBF1F1; color: var(--brand-deep); padding: 1px 6px; border-radius: 2px; font-size: 11px; margin-left: 6px; font-family: 'Inter', sans-serif; }
+  .tree .note { color: var(--brand-deep); font-style: italic; font-family: 'Inter', sans-serif; font-size: 12px; margin-left: 6px; }
+
+  /* Tables */
+  .tbl { background: var(--surface); border: 1px solid var(--line); width: 100%; }
+  .tbl .row { display: grid; grid-template-columns: 1fr 2fr; gap: 24px; padding: 18px 24px; border-top: 1px solid var(--line); font-size: 14px; }
+  .tbl .row:first-child { border-top: 0; background: var(--bg); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft); font-weight: 500; padding: 14px 24px; }
+  .tbl .row .l { font-weight: 500; color: var(--ink); }
+  .tbl .row .r { color: var(--ink-soft); }
+  @media (max-width: 700px) { .tbl .row { grid-template-columns: 1fr; gap: 4px; } .tbl .row:first-child { display: none; } }
+
+  /* Blog grid */
+  .blog-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 700px) { .blog-grid { grid-template-columns: 1fr; } }
+  .post { background: var(--surface); border: 1px solid var(--line); padding: 24px; }
+  .post .ph { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--brand-deep); margin-bottom: 8px; font-weight: 500; }
+  .post h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 20px; margin: 0 0 8px; color: var(--ink); }
+  .post p { font-size: 13px; color: var(--ink-soft); margin: 0 0 10px; }
+  .post .targets { font-size: 12px; color: var(--ink-soft); }
+  .post .targets b { color: var(--ink); font-weight: 500; }
+
+  /* GBP checklist */
+  .gbp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 700px) { .gbp-grid { grid-template-columns: 1fr; } }
+  .gbp { background: var(--surface); border: 1px solid var(--line); padding: 24px; }
+  .gbp h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 20px; margin: 0 0 12px; }
+  .gbp ul { padding-left: 18px; margin: 0; color: var(--ink-soft); font-size: 14px; }
+  .gbp li { margin-bottom: 6px; }
+  .gbp li b { color: var(--ink); font-weight: 500; }
+
+  /* Schema example */
+  pre.schema { background: var(--ink); color: #E8D5CB; padding: 24px; font-family: 'JetBrains Mono', monospace; font-size: 12px; line-height: 1.6; overflow-x: auto; border-radius: 0; }
+  pre.schema .k { color: var(--brand); }
+  pre.schema .v { color: #C9A876; }
+  pre.schema .s { color: #B8C5A6; }
+
+  /* Roadmap */
+  .roadmap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  @media (max-width: 900px) { .roadmap { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .roadmap { grid-template-columns: 1fr; } }
+  .phase { background: var(--surface); border: 1px solid var(--line); padding: 24px; }
+  .phase .num { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 24px; color: var(--brand-deep); }
+  .phase h4 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 500; margin: 4px 0 12px; }
+  .phase ul { padding-left: 16px; margin: 0; font-size: 13px; color: var(--ink-soft); }
+  .phase li { margin-bottom: 6px; }
+
+  /* Internal links diagram */
+  .links-diagram { background: var(--surface); border: 1px solid var(--line); padding: 32px; }
+  .lk { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 48px; }
+  @media (max-width: 700px) { .lk { grid-template-columns: 1fr; } }
+  .lk h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 18px; margin: 0 0 10px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+  .lk .a { color: var(--brand-deep); }
+  .lk p { font-size: 13px; color: var(--ink-soft); margin: 6px 0; line-height: 1.5; }
+  .lk .arrow { color: var(--brand); }
+
+  footer { padding: 56px 0 32px; border-top: 1px solid var(--line); font-size: 13px; color: var(--ink-soft); text-align: center; }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brandmark">Aida Flores Aesthetics <span>· SEO strategy</span></div>
+    <a class="back" href="index.html">← Back to concepts</a>
+  </div>
+</header>
+
+<div class="intro">
+  <div class="wrap">
+    <div class="label">Reference document</div>
+    <h1>How this site will <em>actually rank</em>.</h1>
+    <p>A practical roadmap for making AidaFloresAesthetics.com show up when someone in Huntersville, Cornelius, Davidson, Mooresville, or greater Charlotte searches for an acne specialist, hydrofacial, Korean lashes, or brow lamination. Everything below is implementable on whichever concept you pick.</p>
+    <p>This is plain-language by design. No SEO-jargon spirals. Just the keywords we're targeting, where they live on the site, and what we publish over time to compound search authority.</p>
+
+    <div class="toc">
+      <div class="t">Inside this doc</div>
+      <ol>
+        <li><a href="#keyword-map">Keyword map by service</a></li>
+        <li><a href="#hierarchy">Site hierarchy & URL plan</a></li>
+        <li><a href="#onpage">On-page SEO checklist</a></li>
+        <li><a href="#gbp">Google Business Profile</a></li>
+        <li><a href="#schema">Local schema markup</a></li>
+        <li><a href="#blog">Blog & content roadmap</a></li>
+        <li><a href="#internal">Internal linking strategy</a></li>
+        <li><a href="#roadmap">90-day rollout plan</a></li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<!-- KEYWORD MAP -->
+<section id="keyword-map">
+  <div class="wrap">
+    <h2>1 · Keyword map by service</h2>
+    <p class="desc">Each service gets its own page targeting a primary keyword + a cluster of related searches. Primary = the one that drives the page's H1, title tag, and URL. Secondary = naturally woven into body copy, H2s, and FAQs.</p>
+
+    <!-- Acne / Face Reality -->
+    <div class="kw-section">
+      <div class="head">
+        <h3>Acne & Corrective Skincare</h3>
+        <div class="meta"><span class="priority p1">Priority 1 · Authority</span></div>
+      </div>
+      <div class="body">
+        <div class="lbl">Primary keywords</div>
+        <div class="kw-list">
+          <span class="kw primary">Face Reality Acne Specialist</span>
+          <span class="kw primary">acne treatment near me</span>
+          <span class="kw primary">acne facial Huntersville NC</span>
+          <span class="kw primary">corrective skincare Huntersville</span>
+        </div>
+        <div class="lbl">Secondary & long-tail</div>
+        <div class="kw-list">
+          <span class="kw">Face Reality acne program</span>
+          <span class="kw">acne specialist near me</span>
+          <span class="kw">hormonal acne treatment Cornelius</span>
+          <span class="kw">cystic acne facial Charlotte</span>
+          <span class="kw">teen acne esthetician Lake Norman</span>
+          <span class="kw">acne consultation Huntersville</span>
+          <span class="kw">corrective skincare Cornelius NC</span>
+          <span class="kw">chemical peels Huntersville NC</span>
+          <span class="kw">hydrofacial Huntersville</span>
+          <span class="kw">dermaplane Huntersville</span>
+          <span class="kw">acne scar treatment Mooresville</span>
+        </div>
+        <p>This is the highest-authority opportunity. There's relatively little local competition for "Face Reality Acne Specialist" in the Lake Norman / north Charlotte market, and the search intent is highly motivated (people who Google this are ready to book).</p>
+      </div>
+      <div class="target"><b>Lives on:</b> <code>/acne-treatment-huntersville-nc</code> + sub-pages for <code>/face-reality-acne-program</code>, <code>/chemical-peels</code>, <code>/hydrofacial</code></div>
+    </div>
+
+    <!-- Brows & Lashes -->
+    <div class="kw-section">
+      <div class="head">
+        <h3>Brows & Lashes</h3>
+        <div class="meta"><span class="priority p1">Priority 1 · Revenue</span></div>
+      </div>
+      <div class="body">
+        <div class="lbl">Primary keywords</div>
+        <div class="kw-list">
+          <span class="kw primary">lash lift near me</span>
+          <span class="kw primary">Korean lashes near me</span>
+          <span class="kw primary">brow lamination near me</span>
+          <span class="kw primary">brow wax near me</span>
+        </div>
+        <div class="lbl">Secondary & local long-tail</div>
+        <div class="kw-list">
+          <span class="kw">lash lift Huntersville NC</span>
+          <span class="kw">lash lift Cornelius NC</span>
+          <span class="kw">Korean lashes Huntersville</span>
+          <span class="kw">Korean lash lift Charlotte</span>
+          <span class="kw">brow lamination Huntersville NC</span>
+          <span class="kw">brow lamination Cornelius</span>
+          <span class="kw">brow lamination Charlotte NC</span>
+          <span class="kw">brow tint Huntersville</span>
+          <span class="kw">lash tint near me</span>
+          <span class="kw">brow shaping Lake Norman</span>
+          <span class="kw">eyebrow wax near me</span>
+        </div>
+        <p>Highest-volume revenue opportunity — these are repeat-service searches that drive ongoing bookings every 4–6 weeks. "Near me" queries dominate this category, which makes a strong Google Business Profile (Section 4) just as important as the page itself.</p>
+      </div>
+      <div class="target"><b>Lives on:</b> <code>/brows-and-lashes</code> + sub-pages for <code>/lash-lift-huntersville</code>, <code>/korean-lash-lift</code>, <code>/brow-lamination-huntersville</code></div>
+    </div>
+
+    <!-- Facials -->
+    <div class="kw-section">
+      <div class="head">
+        <h3>Facials & Maintenance</h3>
+        <div class="meta"><span class="priority p2">Priority 2 · Trust-build</span></div>
+      </div>
+      <div class="body">
+        <div class="lbl">Primary keywords</div>
+        <div class="kw-list">
+          <span class="kw primary">facials Huntersville NC</span>
+          <span class="kw primary">esthetician near Huntersville NC</span>
+          <span class="kw primary">esthetician near me</span>
+        </div>
+        <div class="lbl">Secondary & long-tail</div>
+        <div class="kw-list">
+          <span class="kw">facials Cornelius NC</span>
+          <span class="kw">facials Charlotte NC</span>
+          <span class="kw">esthetician Cornelius</span>
+          <span class="kw">esthetician Charlotte</span>
+          <span class="kw">esthetician Lake Norman</span>
+          <span class="kw">signature facial Huntersville</span>
+          <span class="kw">monthly facial Huntersville NC</span>
+          <span class="kw">best facial near me Huntersville</span>
+        </div>
+        <p>Lower-intent but high-volume. These searches catch clients who want a maintenance facial but haven't committed to corrective work. They become entry points into the Face Reality program over time.</p>
+      </div>
+      <div class="target"><b>Lives on:</b> <code>/facials</code> + <code>/signature-facial</code>, <code>/pamper-me-facial</code></div>
+    </div>
+
+    <!-- Local generic -->
+    <div class="kw-section">
+      <div class="head">
+        <h3>Generic local (homepage)</h3>
+        <div class="meta"><span class="priority p2">Priority 2 · Discovery</span></div>
+      </div>
+      <div class="body">
+        <div class="lbl">Primary keywords</div>
+        <div class="kw-list">
+          <span class="kw primary">esthetician Huntersville NC</span>
+          <span class="kw primary">skin care studio Huntersville</span>
+          <span class="kw primary">esthetician near Cornelius NC</span>
+        </div>
+        <div class="lbl">Secondary</div>
+        <div class="kw-list">
+          <span class="kw">licensed esthetician Lake Norman</span>
+          <span class="kw">skin care studio Cornelius</span>
+          <span class="kw">small skincare studio Huntersville</span>
+          <span class="kw">esthetician near Davidson NC</span>
+          <span class="kw">esthetician near Mooresville NC</span>
+          <span class="kw">Aida Flores Aesthetics</span>
+        </div>
+        <p>The homepage takes the broadest local terms. We anchor it to "esthetician Huntersville NC" in the H1 and reinforce throughout the page (about block, testimonials, footer).</p>
+      </div>
+      <div class="target"><b>Lives on:</b> <code>/</code> — the homepage</div>
+    </div>
+  </div>
+</section>
+
+<!-- HIERARCHY -->
+<section id="hierarchy">
+  <div class="wrap">
+    <h2>2 · Site hierarchy & URL plan</h2>
+    <p class="desc">SEO loves a clean, predictable URL structure that mirrors how a human would think about the business. Each URL is short, lowercase, hyphenated, and includes a service or location keyword where it earns it (we don't keyword-stuff).</p>
+
+    <div class="tree">
+<div><span class="h1">/</span><span class="url">aidafloresaesthetics.com/</span><span class="note">homepage — esthetician Huntersville NC</span></div>
+<div>├── <span class="h1">/acne-treatment-huntersville-nc</span><span class="new">SEO pillar</span></div>
+<div>│   ├── <span class="h1">/face-reality-acne-program</span></div>
+<div>│   ├── <span class="h1">/chemical-peels-huntersville</span></div>
+<div>│   ├── <span class="h1">/hydrofacial-huntersville</span></div>
+<div>│   └── <span class="h1">/dermaplane-huntersville</span></div>
+<div>├── <span class="h1">/brows-and-lashes</span><span class="new">SEO pillar</span></div>
+<div>│   ├── <span class="h1">/lash-lift-huntersville</span></div>
+<div>│   ├── <span class="h1">/korean-lash-lift</span></div>
+<div>│   ├── <span class="h1">/brow-lamination-huntersville</span></div>
+<div>│   └── <span class="h1">/brow-wax-and-tint</span></div>
+<div>├── <span class="h1">/facials</span></div>
+<div>│   ├── <span class="h1">/signature-facial</span></div>
+<div>│   └── <span class="h1">/pamper-me-facial</span></div>
+<div>├── <span class="h1">/about-aida</span></div>
+<div>├── <span class="h1">/book</span><span class="note">→ redirects to Vagaro</span></div>
+<div>├── <span class="h1">/gift-cards</span><span class="note">→ redirects to Vagaro</span></div>
+<div>├── <span class="h1">/skin-journal</span><span class="new">blog</span></div>
+<div>│   └── <span class="h1">/skin-journal/{post-slug}</span></div>
+<div>├── <span class="h1">/areas-served</span></div>
+<div>│   ├── <span class="h1">/esthetician-cornelius-nc</span></div>
+<div>│   ├── <span class="h1">/esthetician-davidson-nc</span></div>
+<div>│   ├── <span class="h1">/esthetician-mooresville-nc</span></div>
+<div>│   └── <span class="h1">/esthetician-charlotte-nc</span></div>
+<div>└── <span class="h1">/contact</span></div>
+    </div>
+
+    <h3>Why this structure works</h3>
+    <div class="tbl">
+      <div class="row"><div>Pattern</div><div>Why</div></div>
+      <div class="row"><div class="l">Service + location in URL</div><div class="r">e.g. <code>/acne-treatment-huntersville-nc</code> — directly matches how clients search. Google rewards exact-match landing pages for local intent.</div></div>
+      <div class="row"><div class="l">Pillar → sub-page nesting</div><div class="r">"Acne" is the pillar; "Face Reality" / "Hydrofacial" / "Chemical Peels" are sub-pages that internally link back. This consolidates topical authority.</div></div>
+      <div class="row"><div class="l">Geo landing pages</div><div class="r"><code>/esthetician-cornelius-nc</code> etc. capture nearby-city searches without diluting the main service pages. Each one is hand-written (never duplicated).</div></div>
+      <div class="row"><div class="l">/book and /gift-cards redirects</div><div class="r">Friendly URLs that redirect to Vagaro. Makes external links cleaner and gives us tracking visibility.</div></div>
+      <div class="row"><div class="l">Blog under /skin-journal</div><div class="r">Branded slug. Posts target long-tail informational queries (see Section 6) and link back to service pages.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ON-PAGE -->
+<section id="onpage">
+  <div class="wrap">
+    <h2>3 · On-page SEO checklist</h2>
+    <p class="desc">Every service page on the site follows this template. Boring? Maybe. But it's what consistently lands at the top of local search results.</p>
+
+    <div class="tbl">
+      <div class="row"><div>Element</div><div>Pattern</div></div>
+      <div class="row"><div class="l">&lt;title&gt;</div><div class="r"><code>{Service} in Huntersville, NC | Aida Flores Aesthetics</code> — 50–60 chars max</div></div>
+      <div class="row"><div class="l">Meta description</div><div class="r">155 chars. Includes primary keyword + a benefit + a CTA. Written for humans, not Google.</div></div>
+      <div class="row"><div class="l">H1</div><div class="r">One per page. Always contains the primary keyword. Always location-specific on landing pages.</div></div>
+      <div class="row"><div class="l">H2 / H3 hierarchy</div><div class="r">Logical nesting, never skipped. Each H2 introduces a sub-topic worth its own snippet result.</div></div>
+      <div class="row"><div class="l">First 100 words</div><div class="r">Includes the primary keyword once, naturally. Sets the page's promise clearly.</div></div>
+      <div class="row"><div class="l">FAQs at the bottom</div><div class="r">5–7 questions per service page. These get marked up as <code>FAQPage</code> schema (Section 5) and drive featured snippets.</div></div>
+      <div class="row"><div class="l">Image alt text</div><div class="r">Descriptive, keyword-aware where natural. Never stuffed. Real client transformation alts: "Face Reality client week 14 after cystic acne treatment."</div></div>
+      <div class="row"><div class="l">Internal links</div><div class="r">Each page links to 2–3 related pages with descriptive anchor text (never "click here"). See Section 7.</div></div>
+      <div class="row"><div class="l">Mobile load &lt; 2s</div><div class="r">Lazy-load images below the fold, compress hero images to WebP, system fonts as fallback.</div></div>
+      <div class="row"><div class="l">Sticky booking CTA</div><div class="r">Always visible — both engagement signal and conversion signal. Especially important on mobile.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- GBP -->
+<section id="gbp">
+  <div class="wrap">
+    <h2>4 · Google Business Profile optimization</h2>
+    <p class="desc">For a local single-location business, GBP often drives more bookings than the website itself — especially for "near me" searches. This is the single highest-leverage SEO investment.</p>
+
+    <div class="gbp-grid">
+      <div class="gbp">
+        <h4>Setup essentials</h4>
+        <ul>
+          <li><b>Business name</b> exactly: <code>Aida Flores Aesthetics</code> (no extra keywords — Google penalizes name stuffing)</li>
+          <li><b>Primary category</b>: Skin Care Clinic</li>
+          <li><b>Additional categories</b>: Esthetician · Beauty Salon · Facial Spa</li>
+          <li><b>Service area</b>: Huntersville, Cornelius, Davidson, Mooresville, Charlotte, Concord, Denver, Lake Norman</li>
+          <li><b>Hours</b>: real & accurate (mismatch with website = ranking penalty)</li>
+          <li><b>Website link</b> to the homepage with UTM tag: <code>?utm_source=gbp</code></li>
+          <li><b>Appointment link</b> direct to Vagaro</li>
+        </ul>
+      </div>
+      <div class="gbp">
+        <h4>Services list</h4>
+        <ul>
+          <li>Add every service individually — Face Reality Acne Program, Acne Facial, Hydrofacial, Chemical Peel, Dermaplane, Lash Lift, Korean Lash Lift, Brow Lamination, Brow Wax, Brow Tint, Signature Facial.</li>
+          <li>Each with a 1–2 sentence description that includes the service name + location.</li>
+          <li>Set prices visible — clients filter by price in Maps.</li>
+        </ul>
+      </div>
+      <div class="gbp">
+        <h4>Photos & visuals</h4>
+        <ul>
+          <li><b>Cover photo</b>: warm studio interior or signature treatment moment</li>
+          <li><b>Logo</b>: 1:1 ratio, brand color visible</li>
+          <li><b>Add 3–5 photos/month</b>: studio, products, treatment moments, before/afters (with consent)</li>
+          <li><b>Geo-tag photos</b> by adding to GBP from the on-site phone (boosts local relevance signals)</li>
+        </ul>
+      </div>
+      <div class="gbp">
+        <h4>Reviews & posts (ongoing)</h4>
+        <ul>
+          <li><b>Ask happy clients for reviews</b> via SMS post-visit. Aim for 5/week.</li>
+          <li><b>Reply to every review</b> — 24 hr ideal. Thank by name; mention the service.</li>
+          <li><b>Weekly GBP Post</b>: a new before/after, a tip, an offer. Posts expire after 7 days, so consistency matters.</li>
+          <li><b>Q&A section</b>: pre-seed 5–10 common questions (the same ones from your site FAQ).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEMA -->
+<section id="schema">
+  <div class="wrap">
+    <h2>5 · Local schema markup</h2>
+    <p class="desc">Schema is invisible markup that tells Google exactly what kind of business you are, where you are, what you do, and what your reviews say. Adds rich snippets in search results (stars, hours, address) and is required to compete for local pack positions.</p>
+
+    <h3>Recommended schemas</h3>
+    <div class="tbl">
+      <div class="row"><div>Type</div><div>Where it lives</div></div>
+      <div class="row"><div class="l">BeautySalon (LocalBusiness)</div><div class="r">Sitewide. Marks the business itself with name, address, phone, hours, geo coords, image, price range.</div></div>
+      <div class="row"><div class="l">Service (× N)</div><div class="r">One per service page. Each service nested under the BeautySalon entity.</div></div>
+      <div class="row"><div class="l">FAQPage</div><div class="r">On every service page that has a FAQ section. Drives featured-snippet eligibility.</div></div>
+      <div class="row"><div class="l">Review / AggregateRating</div><div class="r">Sitewide. Pulls from Vagaro / Google reviews. Drives star-ratings in SERP.</div></div>
+      <div class="row"><div class="l">Person (Aida)</div><div class="r">On /about-aida. Marks Aida as the practitioner with credentials and image.</div></div>
+      <div class="row"><div class="l">BreadcrumbList</div><div class="r">Every non-homepage. Shows hierarchical path in search results.</div></div>
+    </div>
+
+    <h3>Example: BeautySalon schema (sitewide, lives in &lt;head&gt;)</h3>
+    <pre class="schema">&lt;script type="application/ld+json"&gt;
+{
+  "<span class="k">@context</span>": "<span class="v">https://schema.org</span>",
+  "<span class="k">@type</span>": "<span class="v">BeautySalon</span>",
+  "<span class="k">name</span>": "<span class="v">Aida Flores Aesthetics</span>",
+  "<span class="k">image</span>": "<span class="v">https://aidafloresaesthetics.com/og.jpg</span>",
+  "<span class="k">@id</span>": "<span class="v">https://aidafloresaesthetics.com/#studio</span>",
+  "<span class="k">url</span>": "<span class="v">https://aidafloresaesthetics.com</span>",
+  "<span class="k">telephone</span>": "<span class="v">+1-980-432-2968</span>",
+  "<span class="k">priceRange</span>": "<span class="v">$$</span>",
+  "<span class="k">address</span>": {
+    "<span class="k">@type</span>": "<span class="v">PostalAddress</span>",
+    "<span class="k">addressLocality</span>": "<span class="v">Huntersville</span>",
+    "<span class="k">addressRegion</span>": "<span class="v">NC</span>",
+    "<span class="k">postalCode</span>": "<span class="v">28078</span>",
+    "<span class="k">addressCountry</span>": "<span class="v">US</span>"
+  },
+  "<span class="k">geo</span>": { "<span class="k">@type</span>": "<span class="v">GeoCoordinates</span>", "<span class="k">latitude</span>": <span class="v">35.4107</span>, "<span class="k">longitude</span>": <span class="v">-80.8428</span> },
+  "<span class="k">openingHoursSpecification</span>": [
+    { "<span class="k">@type</span>": "<span class="v">OpeningHoursSpecification</span>", "<span class="k">dayOfWeek</span>": ["<span class="s">Monday</span>","<span class="s">Tuesday</span>","<span class="s">Wednesday</span>","<span class="s">Thursday</span>","<span class="s">Friday</span>","<span class="s">Saturday</span>"], "<span class="k">opens</span>": "<span class="v">09:00</span>", "<span class="k">closes</span>": "<span class="v">18:00</span>" }
+  ],
+  "<span class="k">sameAs</span>": ["<span class="v">https://www.instagram.com/Aidaflores_aesthetics/</span>"],
+  "<span class="k">areaServed</span>": ["<span class="s">Huntersville, NC</span>","<span class="s">Cornelius, NC</span>","<span class="s">Davidson, NC</span>","<span class="s">Mooresville, NC</span>","<span class="s">Charlotte, NC</span>","<span class="s">Lake Norman</span>"]
+}
+&lt;/script&gt;</pre>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="wrap">
+    <h2>6 · Blog & content roadmap</h2>
+    <p class="desc">The blog ("Skin Journal") is how we capture long-tail informational searches that turn into bookings 30–90 days later. Two posts/month is enough to compound — the trick is each one targets a real search query and links to a service page.</p>
+
+    <h3>First 12 posts (in priority order)</h3>
+    <div class="blog-grid">
+      <div class="post"><div class="ph">Acne · authority</div><h4>How long does it really take to clear acne with Face Reality?</h4><p>A patient, honest walk-through of the 90-day arc with real client timelines. Links to the Face Reality program page.</p><div class="targets"><b>Targets:</b> "how long Face Reality acne program", "Face Reality results timeline"</div></div>
+      <div class="post"><div class="ph">Acne · authority</div><h4>What to expect at your first acne consultation</h4><p>De-mystifies the consult, what to bring, what we'll ask. Reduces booking friction.</p><div class="targets"><b>Targets:</b> "what happens at an acne consultation", "first acne facial what to expect"</div></div>
+      <div class="post"><div class="ph">Acne · local</div><h4>Where to find a Face Reality Acne Specialist near Huntersville, NC</h4><p>Educational + lightly promotional. Explains what Face Reality certification means and why it matters.</p><div class="targets"><b>Targets:</b> "Face Reality near me", "acne specialist Huntersville"</div></div>
+      <div class="post"><div class="ph">Brows · maintenance</div><h4>Brow lamination aftercare: the 7-day routine that protects your investment</h4><p>Practical aftercare guide. Drives clients back for rebooking.</p><div class="targets"><b>Targets:</b> "brow lamination aftercare", "how to take care of brow lamination"</div></div>
+      <div class="post"><div class="ph">Lashes · trend</div><h4>Korean lash lift vs. traditional lash lift — what's the difference?</h4><p>Explainer with photos. Pre-sells the Korean Lash Lift offering.</p><div class="targets"><b>Targets:</b> "Korean lash lift vs lash lift", "Korean lashes vs lash extensions"</div></div>
+      <div class="post"><div class="ph">Skincare · education</div><h4>Chemical peels at home vs. in-studio: what's actually safe?</h4><p>Honest comparison. Positions Aida as the trustworthy expert.</p><div class="targets"><b>Targets:</b> "at home chemical peel safe", "professional chemical peel benefits"</div></div>
+      <div class="post"><div class="ph">Skincare · acne</div><h4>The skincare routine I recommend for hormonal acne</h4><p>Aida's actual recommendations. Long-tail magnet, very high intent.</p><div class="targets"><b>Targets:</b> "skincare routine for hormonal acne", "best products for hormonal acne"</div></div>
+      <div class="post"><div class="ph">Facials · maintenance</div><h4>How often should you really get a facial?</h4><p>Practical FAQ-style. Drives bookings for ongoing maintenance.</p><div class="targets"><b>Targets:</b> "how often facial", "best facial frequency"</div></div>
+      <div class="post"><div class="ph">Local · trust</div><h4>Why I'm the only person you'll see at the studio</h4><p>Personal essay. Builds the relationship-led brand and unique positioning.</p><div class="targets"><b>Targets:</b> brand & long-tail trust searches</div></div>
+      <div class="post"><div class="ph">Acne · seasonal</div><h4>Spring breakouts: why your skin freaks out at the season change</h4><p>Seasonal content republished annually. Captures seasonal search spikes.</p><div class="targets"><b>Targets:</b> "spring acne", "why am I breaking out in spring"</div></div>
+      <div class="post"><div class="ph">Local · area</div><h4>The best esthetician in Cornelius, NC (and how to choose one)</h4><p>Local-intent post. Builds Cornelius geo-relevance.</p><div class="targets"><b>Targets:</b> "esthetician Cornelius NC", "best esthetician near me"</div></div>
+      <div class="post"><div class="ph">Brows · maintenance</div><h4>How to grow back over-plucked eyebrows (in 90 days)</h4><p>Practical guide. Drives consultations.</p><div class="targets"><b>Targets:</b> "how to grow eyebrows back", "thin eyebrows fix"</div></div>
+    </div>
+
+    <h3>Cadence & ongoing</h3>
+    <div class="tbl">
+      <div class="row"><div>Cadence</div><div>What & why</div></div>
+      <div class="row"><div class="l">2 posts / month</div><div class="r">Sustainable for a single-person business. Quality > quantity.</div></div>
+      <div class="row"><div class="l">800–1,400 words</div><div class="r">Long enough to rank, short enough to read on a phone in the waiting room.</div></div>
+      <div class="row"><div class="l">1 client photo per post</div><div class="r">Real visuals from the studio. Boosts time-on-page and trust.</div></div>
+      <div class="row"><div class="l">2 internal links per post</div><div class="r">To a service page + one related blog post. Builds topical authority over time.</div></div>
+      <div class="row"><div class="l">Republish every 12 months</div><div class="r">Update with new photos, new timelines, fresh date. Google rewards freshness.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- INTERNAL LINKS -->
+<section id="internal">
+  <div class="wrap">
+    <h2>7 · Internal linking strategy</h2>
+    <p class="desc">Every page on the site should link to and from related pages. This passes "link equity" through the site, helps Google understand the topical relationship between pages, and keeps clients moving toward booking.</p>
+
+    <div class="links-diagram">
+      <div class="lk">
+        <div>
+          <h4>Homepage</h4>
+          <p>Links <span class="arrow">→</span> to: <span class="a">/acne-treatment-huntersville-nc</span>, <span class="a">/brows-and-lashes</span>, <span class="a">/facials</span>, <span class="a">/about-aida</span>, <span class="a">/book</span></p>
+          <p>Linked from <span class="arrow">←</span>: Every footer, every breadcrumb.</p>
+        </div>
+        <div>
+          <h4>Acne pillar page</h4>
+          <p>Links <span class="arrow">→</span> to: <span class="a">/face-reality-acne-program</span>, <span class="a">/chemical-peels</span>, <span class="a">/hydrofacial</span>, <span class="a">/dermaplane</span>, <span class="a">/skin-journal</span> (acne posts)</p>
+          <p>Linked from <span class="arrow">←</span>: Homepage hero, services section, footer, related blog posts.</p>
+        </div>
+        <div>
+          <h4>Brows & Lashes pillar</h4>
+          <p>Links <span class="arrow">→</span> to: <span class="a">/lash-lift</span>, <span class="a">/korean-lash-lift</span>, <span class="a">/brow-lamination</span>, <span class="a">/brow-wax-and-tint</span></p>
+          <p>Linked from <span class="arrow">←</span>: Homepage services, footer, brow/lash blog posts.</p>
+        </div>
+        <div>
+          <h4>Blog posts</h4>
+          <p>Each post links <span class="arrow">→</span> to: the most relevant service page (e.g. acne post → Face Reality page) + 1 other related blog post.</p>
+          <p>Linked from <span class="arrow">←</span>: Service page "Related reading" block, blog index, Instagram bio link rotations.</p>
+        </div>
+        <div>
+          <h4>Geo landing pages</h4>
+          <p>Each city page links <span class="arrow">→</span> to: <span class="a">/acne-treatment-huntersville-nc</span> (pillar), <span class="a">/brows-and-lashes</span> (pillar), <span class="a">/book</span></p>
+          <p>Linked from <span class="arrow">←</span>: Footer "Areas served" block, sitemap.</p>
+        </div>
+        <div>
+          <h4>Book / Gift Cards</h4>
+          <p>Linked from <span class="arrow">←</span>: Every page header, every footer, every sticky mobile CTA, every service page final block.</p>
+          <p>Anchors vary: "Book on Vagaro", "Begin your skin journey", "Schedule a consult", "Gift a session". Variation tells Google the page is the booking destination.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section id="roadmap">
+  <div class="wrap">
+    <h2>8 · 90-day rollout plan</h2>
+    <p class="desc">Once a concept is picked, here's the realistic build & launch sequence. Designed to be deployable in roughly 90 days with weekly check-ins.</p>
+
+    <div class="roadmap">
+      <div class="phase">
+        <div class="num">01</div>
+        <h4>Weeks 1–3 · Build</h4>
+        <ul>
+          <li>Lock chosen design system</li>
+          <li>Final photo direction & shoot</li>
+          <li>Build homepage + 3 service pillar pages</li>
+          <li>Build About + Contact + Book/Gift redirects</li>
+          <li>Implement BeautySalon schema</li>
+          <li>Set up Vagaro deep-links</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <div class="num">02</div>
+        <h4>Weeks 4–6 · Expand</h4>
+        <ul>
+          <li>Build sub-service pages (Face Reality, Hydrofacial, Korean Lashes, Brow Lamination, etc.)</li>
+          <li>Add geo landing pages (Cornelius, Davidson, Mooresville, Charlotte)</li>
+          <li>Implement FAQPage + Service schema</li>
+          <li>Upload first 4 blog posts</li>
+          <li>Configure analytics & Search Console</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <div class="num">03</div>
+        <h4>Weeks 7–9 · Launch</h4>
+        <ul>
+          <li>Migrate from Vagaro site → new domain</li>
+          <li>Set up 301 redirects from old URLs</li>
+          <li>Submit sitemap to Google</li>
+          <li>Update GBP with new website URL</li>
+          <li>Send launch email to client list</li>
+          <li>Announce on Instagram</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <div class="num">04</div>
+        <h4>Weeks 10–12 · Compound</h4>
+        <ul>
+          <li>2 new blog posts</li>
+          <li>Begin weekly GBP Posts</li>
+          <li>Start review-request SMS flow</li>
+          <li>First content update / freshness pass</li>
+          <li>Review Search Console for opportunities</li>
+          <li>Plan quarter 2 content</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    SEO strategy reference v1.0 · <a href="index.html" style="color: var(--brand-deep);">← Back to concepts</a> · <a href="design-system.html" style="color: var(--brand-deep);">Design system →</a>
+  </div>
+</footer>
+
+</body>
+</html>

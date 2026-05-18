@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Design System Reference · Aida Flores Aesthetics Concepts</title>
+<meta name="description" content="Palette, typography, and component reference for the three Aida Flores Aesthetics website concepts." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root { --bg: #F8F5F0; --surface: #FFFFFF; --ink: #1E1A16; --ink-soft: #5C534B; --brand: #D18D8D; --brand-deep: #A86E6E; --line: #E6DFD5; }
+  *,*::before,*::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; line-height: 1.6; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+  h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; margin: 0; letter-spacing: -0.005em; }
+  em { font-style: italic; color: var(--brand-deep); }
+
+  header.top { background: var(--surface); border-bottom: 1px solid var(--line); padding: 20px 0; }
+  header.top .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+  .brandmark { font-family: 'Cormorant Garamond', serif; font-size: 20px; }
+  .brandmark span { color: var(--brand-deep); }
+  .back { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-soft); }
+  .back:hover { color: var(--brand-deep); }
+
+  .intro { padding: 80px 0 56px; }
+  .intro .label { font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--brand-deep); margin-bottom: 18px; font-weight: 500; }
+  .intro h1 { font-size: clamp(40px, 5.5vw, 64px); line-height: 1.05; margin-bottom: 20px; }
+  .intro p { font-size: 17px; color: var(--ink-soft); max-width: 720px; }
+  .intro p + p { margin-top: 12px; }
+
+  section { padding: 56px 0; border-top: 1px solid var(--line); }
+  section h2 { font-size: clamp(28px, 3.5vw, 40px); margin-bottom: 12px; }
+  section .desc { color: var(--ink-soft); max-width: 720px; margin-bottom: 40px; }
+
+  /* Palette */
+  .pal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  @media (max-width: 900px) { .pal-grid { grid-template-columns: 1fr; } }
+  .pal { background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 28px; }
+  .pal h3 { font-size: 22px; margin-bottom: 4px; }
+  .pal .sub { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--brand-deep); margin-bottom: 20px; }
+  .swatches { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .sw { padding: 14px; border-radius: 4px; display: flex; flex-direction: column; gap: 4px; min-height: 90px; }
+  .sw .l { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.7; }
+  .sw .v { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500; }
+  .sw.dark { color: #fff; }
+  .role { margin-top: 18px; font-size: 13px; color: var(--ink-soft); display: flex; justify-content: space-between; padding-top: 10px; border-top: 1px solid var(--line); }
+  .role b { color: var(--ink); font-weight: 500; }
+
+  /* Typography */
+  .type-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  @media (max-width: 900px) { .type-grid { grid-template-columns: 1fr; } }
+  .typecard { background: var(--surface); border: 1px solid var(--line); padding: 32px; }
+  .typecard h3 { font-size: 22px; margin-bottom: 4px; }
+  .typecard .sub { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--brand-deep); margin-bottom: 28px; }
+  .specimen { padding: 24px 0; border-bottom: 1px solid var(--line); }
+  .specimen:last-child { border-bottom: 0; padding-bottom: 0; }
+  .specimen .name { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 10px; }
+  .specimen .demo { line-height: 1.05; }
+  .typecard.atelier .demo.h { font-family: 'Cormorant Garamond', serif; font-size: 44px; }
+  .typecard.atelier .demo.h em { color: var(--brand-deep); font-style: italic; }
+  .typecard.atelier .demo.b { font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.6; color: var(--ink-soft); font-weight: 300; }
+  .typecard.atelier .demo.eyebrow { font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--brand-deep); font-weight: 500; }
+  .typecard.sanctuary .demo.h { font-family: 'Fraunces', serif; font-size: 44px; font-weight: 400; }
+  .typecard.sanctuary .demo.h em { color: var(--brand-deep); font-style: italic; }
+  .typecard.sanctuary .demo.b { font-family: 'DM Sans', sans-serif; font-size: 15px; line-height: 1.65; color: var(--ink-soft); }
+  .typecard.sanctuary .demo.eyebrow { font-family: 'Fraunces', serif; font-style: italic; font-size: 16px; color: var(--brand-deep); }
+  .typecard.studio .demo.h { font-family: 'Instrument Serif', serif; font-size: 52px; }
+  .typecard.studio .demo.h em { color: var(--brand-deep); font-style: italic; }
+  .typecard.studio .demo.b { font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.55; color: var(--ink-soft); }
+  .typecard.studio .demo.eyebrow { font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: #A88656; font-weight: 600; }
+
+  /* Components */
+  .comp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  @media (max-width: 900px) { .comp-grid { grid-template-columns: 1fr; } }
+  .comp { background: var(--surface); border: 1px solid var(--line); padding: 32px; display: flex; flex-direction: column; gap: 20px; }
+  .comp h3 { font-size: 22px; }
+  .comp .row { display: flex; gap: 10px; flex-wrap: wrap; }
+
+  /* Atelier component examples */
+  .atl-btn { padding: 13px 22px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; border: 1px solid #1F1B17; background: #1F1B17; color: #F2EBE0; font-family: 'Inter', sans-serif; }
+  .atl-btn.ghost { background: transparent; color: #1F1B17; }
+  .atl-btn.blush { background: #D18D8D; border-color: #D18D8D; color: #fff; }
+  .atl-card { padding: 24px; background: #FBF8F3; border: 1px solid #E6DFD3; }
+  .atl-card .num { font-family: 'Cormorant Garamond', serif; font-style: italic; color: #A86E6E; font-size: 14px; margin-bottom: 12px; }
+  .atl-card h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 22px; margin: 0 0 6px; }
+  .atl-card p { font-size: 13px; color: #6B5F52; margin: 0; }
+
+  /* Sanctuary component examples */
+  .snc-btn { padding: 13px 22px; font-size: 14px; font-weight: 500; border: 1px solid transparent; border-radius: 999px; background: #D18D8D; color: #fff; font-family: 'DM Sans', sans-serif; }
+  .snc-btn.ink { background: #3D2F26; color: #F4EEE3; }
+  .snc-btn.outline { background: transparent; color: #3D2F26; border-color: #3D2F26; }
+  .snc-card { padding: 24px; background: #FDFAF4; border-radius: 22px; }
+  .snc-card .ic { width: 40px; height: 40px; border-radius: 50%; background: #D18D8D; color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-style: italic; margin-bottom: 14px; }
+  .snc-card h4 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 22px; margin: 0 0 6px; color: #3D2F26; }
+  .snc-card p { font-size: 13px; color: #5C4A3F; margin: 0; }
+
+  /* Studio component examples */
+  .std-btn { padding: 13px 22px; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; border: 0; background: #1F1B17; color: #F2EEE9; font-family: 'Inter', sans-serif; }
+  .std-btn.gold { background: #C9A876; color: #1F1B17; }
+  .std-btn.ghost { background: transparent; color: #1F1B17; border: 1px solid #1F1B17; }
+  .std-card { padding: 24px; background: #1F1B17; color: #F2EEE9; }
+  .std-card .lbl { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 600; color: #C9A876; margin-bottom: 12px; }
+  .std-card h4 { font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 26px; margin: 0 0 6px; color: #F2EEE9; }
+  .std-card p { font-size: 13px; color: rgba(242, 238, 233, 0.75); margin: 0; }
+
+  /* Spacing scale */
+  .spacing-grid { display: grid; grid-template-columns: repeat(8, 1fr); gap: 6px; align-items: end; }
+  .sp { background: var(--brand); border-radius: 2px; position: relative; }
+  .sp::after { content: attr(data-px); position: absolute; bottom: -22px; left: 0; right: 0; text-align: center; font-size: 11px; color: var(--ink-soft); font-family: 'JetBrains Mono', monospace; }
+
+  /* Use guide */
+  .guide { background: var(--surface); padding: 32px; border: 1px solid var(--line); margin-top: 24px; }
+  .guide h3 { font-size: 22px; margin-bottom: 18px; }
+  .guide ul { padding-left: 18px; color: var(--ink-soft); font-size: 15px; }
+  .guide li { margin-bottom: 8px; }
+  .guide b { color: var(--ink); font-weight: 500; }
+
+  footer { padding: 56px 0 32px; border-top: 1px solid var(--line); font-size: 13px; color: var(--ink-soft); text-align: center; }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brandmark">Aida Flores Aesthetics <span>· design system</span></div>
+    <a class="back" href="index.html">← Back to concepts</a>
+  </div>
+</header>
+
+<div class="intro">
+  <div class="wrap">
+    <div class="label">Reference document</div>
+    <h1>Three design systems, <em>one brand</em>.</h1>
+    <p>Each concept has its own palette, typography pairing, and component language — but all three share the same brand color, the same warm sensibility, and the same conversion-focused structure. This page collects them in one place so you can compare them side by side.</p>
+    <p style="margin-top: 8px;">Once you've picked a direction, the chosen design system becomes the foundation for every page on the site — from blog posts to email receipts.</p>
+  </div>
+</div>
+
+<!-- COLOR PALETTES -->
+<section>
+  <div class="wrap">
+    <h2>Color palettes</h2>
+    <p class="desc">All three concepts use the brand blush <code style="background:#D18D8D;color:#fff;padding:2px 8px;border-radius:3px;font-size:13px;">#D18D8D</code> as an accent — the rest changes how each one feels. Concept 1 is creamier and quieter. Concept 2 brings in sage and soft pink-beige. Concept 3 leans into stone, gold, and deep charcoal for editorial contrast.</p>
+
+    <div class="pal-grid">
+      <div class="pal">
+        <h3>Atelier</h3>
+        <div class="sub">Concept 01 · Elevated corrective</div>
+        <div class="swatches">
+          <div class="sw" style="background:#FBF8F3;border:1px solid #E6DFD3;"><span class="l">Background</span><span class="v">#FBF8F3</span></div>
+          <div class="sw" style="background:#F2EBE0;border:1px solid #E6DFD3;"><span class="l">Cream surface</span><span class="v">#F2EBE0</span></div>
+          <div class="sw" style="background:#D6C8B8;"><span class="l">Soft taupe</span><span class="v">#D6C8B8</span></div>
+          <div class="sw dark" style="background:#D18D8D;"><span class="l">Brand blush</span><span class="v">#D18D8D</span></div>
+          <div class="sw dark" style="background:#A86E6E;"><span class="l">Brand deep</span><span class="v">#A86E6E</span></div>
+          <div class="sw dark" style="background:#1F1B17;"><span class="l">Ink</span><span class="v">#1F1B17</span></div>
+        </div>
+        <div class="role"><span>Used for</span><b>Quiet, magazine-like authority</b></div>
+      </div>
+
+      <div class="pal">
+        <h3>Sanctuary</h3>
+        <div class="sub">Concept 02 · Warm wellness</div>
+        <div class="swatches">
+          <div class="sw" style="background:#F4EEE3;border:1px solid #E0D5C2;"><span class="l">Background</span><span class="v">#F4EEE3</span></div>
+          <div class="sw" style="background:#E8D5CB;"><span class="l">Soft pink-beige</span><span class="v">#E8D5CB</span></div>
+          <div class="sw dark" style="background:#B8C5A6;color:#3D2F26;"><span class="l">Sage</span><span class="v">#B8C5A6</span></div>
+          <div class="sw dark" style="background:#D18D8D;"><span class="l">Brand blush</span><span class="v">#D18D8D</span></div>
+          <div class="sw dark" style="background:#5C4A3F;"><span class="l">Warm brown</span><span class="v">#5C4A3F</span></div>
+          <div class="sw dark" style="background:#3D2F26;"><span class="l">Ink</span><span class="v">#3D2F26</span></div>
+        </div>
+        <div class="role"><span>Used for</span><b>Soft luxury, relationship-led</b></div>
+      </div>
+
+      <div class="pal">
+        <h3>Studio</h3>
+        <div class="sub">Concept 03 · Visual-first</div>
+        <div class="swatches">
+          <div class="sw" style="background:#F2EEE9;border:1px solid #E1DAD0;"><span class="l">Stone</span><span class="v">#F2EEE9</span></div>
+          <div class="sw dark" style="background:#C9A876;color:#1F1B17;"><span class="l">Soft gold</span><span class="v">#C9A876</span></div>
+          <div class="sw dark" style="background:#A88656;"><span class="l">Gold deep</span><span class="v">#A88656</span></div>
+          <div class="sw dark" style="background:#D18D8D;"><span class="l">Brand blush</span><span class="v">#D18D8D</span></div>
+          <div class="sw dark" style="background:#5C534B;"><span class="l">Mid neutral</span><span class="v">#5C534B</span></div>
+          <div class="sw dark" style="background:#1F1B17;"><span class="l">Dark</span><span class="v">#1F1B17</span></div>
+        </div>
+        <div class="role"><span>Used for</span><b>Editorial contrast, social-forward</b></div>
+      </div>
+    </div>
+
+    <div class="guide">
+      <h3>How to read these</h3>
+      <ul>
+        <li><b>Background</b> — the largest surface, fills most of the page.</li>
+        <li><b>Surface / accent</b> — used for cards, sections that need to stand out from background.</li>
+        <li><b>Brand blush</b> — limited to CTAs, accents, dividers. Never the dominant color (this was a specific brief).</li>
+        <li><b>Ink</b> — primary text. Always warm-black, never pure #000.</li>
+        <li><b>Each palette is intentionally limited to ~6 colors</b> so the brand feels cohesive across every page.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- TYPOGRAPHY -->
+<section>
+  <div class="wrap">
+    <h2>Typography pairings</h2>
+    <p class="desc">Each concept pairs one serif with one sans. The serif carries personality (display headlines, italicized accents); the sans carries readability (body, UI, captions). All three are free Google Fonts — production-friendly with no licensing concerns.</p>
+
+    <div class="type-grid">
+      <div class="typecard atelier">
+        <h3>Atelier</h3>
+        <div class="sub">Cormorant Garamond + Inter</div>
+        <div class="specimen">
+          <div class="name">Eyebrow</div>
+          <div class="demo eyebrow">FACE REALITY CERTIFIED</div>
+        </div>
+        <div class="specimen">
+          <div class="name">Headline (Cormorant Garamond 500)</div>
+          <div class="demo h">Corrective skincare, <em>truly personal.</em></div>
+        </div>
+        <div class="specimen">
+          <div class="name">Body (Inter Light 300)</div>
+          <div class="demo b">A small studio for clients who want real results — guided by an esthetician who treats skin as a relationship, not a transaction.</div>
+        </div>
+      </div>
+
+      <div class="typecard sanctuary">
+        <h3>Sanctuary</h3>
+        <div class="sub">Fraunces + DM Sans</div>
+        <div class="specimen">
+          <div class="name">Eyebrow</div>
+          <div class="demo eyebrow">— welcome to your skin sanctuary</div>
+        </div>
+        <div class="specimen">
+          <div class="name">Headline (Fraunces 400)</div>
+          <div class="demo h">Soft, considered <em>care</em>.</div>
+        </div>
+        <div class="specimen">
+          <div class="name">Body (DM Sans Regular 400)</div>
+          <div class="demo b">An intentionally small studio in Huntersville, where corrective skincare, brows & lashes, and relaxation facials are practiced slowly, and personally.</div>
+        </div>
+      </div>
+
+      <div class="typecard studio">
+        <h3>Studio</h3>
+        <div class="sub">Instrument Serif + Inter</div>
+        <div class="specimen">
+          <div class="name">Eyebrow</div>
+          <div class="demo eyebrow">FACE REALITY CERTIFIED</div>
+        </div>
+        <div class="specimen">
+          <div class="name">Headline (Instrument Serif 400)</div>
+          <div class="demo h">Results <em>worth</em> following.</div>
+        </div>
+        <div class="specimen">
+          <div class="name">Body (Inter Regular 400)</div>
+          <div class="demo b">A one-person, by-appointment skincare and brow/lash studio serving Huntersville, Cornelius, Charlotte and the greater Lake Norman area.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="guide">
+      <h3>Type hierarchy rules</h3>
+      <ul>
+        <li><b>One H1 per page</b> — always location-targeted on SEO landing pages (e.g. "Acne treatment in Huntersville, NC").</li>
+        <li><b>H2 for major sections</b>, H3 for subsections. Never skip levels.</li>
+        <li><b>Italics carry personality</b> — used sparingly to break up serif headlines and highlight key emotional beats.</li>
+        <li><b>Body text never goes below 15px</b> on mobile, 16px on desktop. Accessibility-first.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- COMPONENTS -->
+<section>
+  <div class="wrap">
+    <h2>Core components</h2>
+    <p class="desc">A glimpse of the button system, card pattern, and primary CTA treatment for each concept. The same components scale across blog posts, service pages, booking flows, etc.</p>
+
+    <div class="comp-grid">
+      <div class="comp">
+        <h3>Atelier</h3>
+        <div class="row">
+          <button class="atl-btn">Book on Vagaro</button>
+          <button class="atl-btn ghost">Acne consults →</button>
+          <button class="atl-btn blush">Gift a session</button>
+        </div>
+        <div class="atl-card">
+          <div class="num">01 — Corrective</div>
+          <h4>Acne & Corrective</h4>
+          <p>For active acne, post-acne marks, and barrier repair.</p>
+        </div>
+      </div>
+
+      <div class="comp">
+        <h3>Sanctuary</h3>
+        <div class="row">
+          <button class="snc-btn">Schedule a visit</button>
+          <button class="snc-btn ink">Explore →</button>
+          <button class="snc-btn outline">Gift a session</button>
+        </div>
+        <div class="snc-card">
+          <div class="ic">A</div>
+          <h4>Skin & Acne Care</h4>
+          <p>Corrective treatments for clients who want lasting clearing.</p>
+        </div>
+      </div>
+
+      <div class="comp">
+        <h3>Studio</h3>
+        <div class="row">
+          <button class="std-btn">Book Now</button>
+          <button class="std-btn gold">See Results</button>
+          <button class="std-btn ghost">Menu →</button>
+        </div>
+        <div class="std-card">
+          <div class="lbl">01 · SKIN</div>
+          <h4>Acne & Corrective</h4>
+          <p>Face Reality. Hydrofacials. Peels. Real clearing in 90 days.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="guide">
+      <h3>Cross-concept rules</h3>
+      <ul>
+        <li><b>Primary CTA on every page</b> — "Book on Vagaro" or its variant. Always above the fold.</li>
+        <li><b>Sticky mobile CTA</b> on every page — Call + Book buttons fixed to bottom of screen on mobile.</li>
+        <li><b>Three distinct button weights</b> — primary (filled), secondary (outlined or filled lighter), tertiary (text link with arrow).</li>
+        <li><b>Cards always link</b> to a detail page where one exists. Never dead-end content.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SPACING -->
+<section>
+  <div class="wrap">
+    <h2>Spacing scale</h2>
+    <p class="desc">Consistent spacing is what makes the design feel intentional rather than ad-hoc. All three concepts share an 8-step scale based on multiples of 4px.</p>
+
+    <div class="spacing-grid" style="margin-bottom: 32px;">
+      <div class="sp" style="height: 4px;" data-px="4"></div>
+      <div class="sp" style="height: 8px;" data-px="8"></div>
+      <div class="sp" style="height: 16px;" data-px="16"></div>
+      <div class="sp" style="height: 24px;" data-px="24"></div>
+      <div class="sp" style="height: 32px;" data-px="32"></div>
+      <div class="sp" style="height: 48px;" data-px="48"></div>
+      <div class="sp" style="height: 64px;" data-px="64"></div>
+      <div class="sp" style="height: 96px;" data-px="96"></div>
+    </div>
+
+    <div class="guide">
+      <h3>How it's used</h3>
+      <ul>
+        <li><b>4–16px</b> — gaps within a single component (button padding, icon-to-text).</li>
+        <li><b>24–32px</b> — between elements inside a section (heading to body, card padding).</li>
+        <li><b>48–64px</b> — between section internals on desktop (head to grid).</li>
+        <li><b>80–100px</b> — between major sections on desktop. Halved (56–64px) on mobile.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Design system reference v1.0 · <a href="index.html" style="color: var(--brand-deep);">Back to concepts</a> · <a href="seo-strategy.html" style="color: var(--brand-deep);">SEO strategy →</a>
+  </div>
+</footer>
+
+</body>
+</html>

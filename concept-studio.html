@@ -1,0 +1,878 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aida Flores Aesthetics — Esthetician in Huntersville, NC · Acne, Brows & Lashes</title>
+<meta name="description" content="Face Reality Acne Specialist & esthetician in Huntersville, NC. Korean lashes, brow lamination, hydrofacials, chemical peels. Serving Huntersville, Cornelius & Charlotte." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #F2EEE9;
+    --surface: #FFFFFF;
+    --dark: #1F1B17;
+    --dark-2: #2E2823;
+    --ink: #1F1B17;
+    --ink-soft: #5C534B;
+    --line: #E1DAD0;
+    --brand: #D18D8D;
+    --brand-deep: #B07474;
+    --gold: #C9A876;
+    --gold-deep: #A88656;
+  }
+  *,*::before,*::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.55;
+    font-weight: 400;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+  .wrap { max-width: 1320px; margin: 0 auto; padding: 0 32px; }
+  h1, h2, h3, h4 { font-family: 'Instrument Serif', serif; font-weight: 400; margin: 0; letter-spacing: -0.005em; }
+  em { font-style: italic; }
+
+  /* Util bar */
+  .util-bar {
+    background: var(--dark);
+    color: var(--bg);
+    font-size: 12px;
+    padding: 10px 0;
+    letter-spacing: 0.04em;
+  }
+  .util-bar .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .util-bar .left, .util-bar .right { display: flex; gap: 20px; }
+  .util-bar a:hover { color: var(--gold); }
+
+  /* Header */
+  header.site {
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  header.site .wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 18px; padding-bottom: 18px;
+    gap: 24px;
+  }
+  .logo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .logo .accent { display: inline-block; width: 8px; height: 8px; background: var(--gold); margin-left: 6px; border-radius: 50%; vertical-align: middle; }
+  nav.primary { display: flex; gap: 30px; font-size: 14px; font-weight: 500; }
+  nav.primary a { color: var(--ink); transition: color .2s; }
+  nav.primary a:hover { color: var(--gold-deep); }
+  .nav-cta { display: flex; gap: 12px; align-items: center; }
+  .menu-toggle { display: none; background: none; border: 0; font-size: 22px; cursor: pointer; color: var(--ink); }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 14px 26px;
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .2s ease;
+    border: 0;
+    font-family: 'Inter', sans-serif;
+  }
+  .btn.dark { background: var(--dark); color: var(--bg); }
+  .btn.dark:hover { background: var(--gold-deep); color: var(--dark); }
+  .btn.gold { background: var(--gold); color: var(--dark); }
+  .btn.gold:hover { background: var(--gold-deep); }
+  .btn.blush { background: var(--brand); color: #fff; }
+  .btn.blush:hover { background: var(--brand-deep); }
+  .btn.ghost { background: transparent; border: 1px solid var(--ink); color: var(--ink); }
+  .btn.ghost:hover { background: var(--ink); color: var(--bg); }
+  .btn.ghost-light { background: transparent; border: 1px solid var(--bg); color: var(--bg); }
+  .btn.ghost-light:hover { background: var(--bg); color: var(--dark); }
+  .btn.small { padding: 11px 18px; font-size: 11px; }
+
+  @media (max-width: 900px) {
+    nav.primary { display: none; }
+    .menu-toggle { display: inline-flex; }
+  }
+
+  /* ====== HERO ====== */
+  section.hero { padding: 56px 0 0; }
+  .hero-top { display: grid; grid-template-columns: 1.4fr 1fr; gap: 60px; align-items: end; margin-bottom: 32px; }
+  @media (max-width: 900px) { .hero-top { grid-template-columns: 1fr; gap: 32px; } }
+  .hero h1 {
+    font-size: clamp(56px, 10vw, 144px);
+    line-height: 0.92;
+    letter-spacing: -0.025em;
+  }
+  .hero h1 em { color: var(--brand-deep); }
+  .hero h1 .gold { color: var(--gold); font-style: italic; }
+  .hero .badges { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 32px; }
+  .hero .badges .pill { display: inline-flex; align-items: center; gap: 8px; background: var(--dark); color: var(--bg); padding: 6px 14px; }
+  .hero .badges .pill .dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; }
+  .hero .meta-card {
+    background: var(--surface);
+    padding: 28px 32px;
+    border: 1px solid var(--line);
+  }
+  .hero .meta-card .num { font-family: 'Instrument Serif', serif; font-size: 56px; line-height: 1; color: var(--dark); }
+  .hero .meta-card .num em { color: var(--brand-deep); }
+  .hero .meta-card p { font-size: 14px; color: var(--ink-soft); margin: 10px 0 0; }
+  .hero .meta-card .ll { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 8px; }
+  .hero .hero-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+    margin: 28px 0 56px;
+  }
+  .hero .hero-grid > div {
+    aspect-ratio: 3/4;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero .hero-grid > div::after {
+    content: attr(data-label);
+    position: absolute; bottom: 12px; left: 12px;
+    background: rgba(0,0,0,0.55);
+    color: var(--bg);
+    padding: 4px 10px;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    backdrop-filter: blur(6px);
+  }
+  .hero .hero-grid .ig {
+    grid-column: span 2; grid-row: span 2;
+    aspect-ratio: 1;
+    background:
+      linear-gradient(135deg, var(--brand) 0%, var(--brand-deep) 100%);
+  }
+  .hero .hero-grid .t1 { background: linear-gradient(160deg, #2E2823, #1F1B17); }
+  .hero .hero-grid .t2 { background: linear-gradient(160deg, #E8D5CB, #C9A188); }
+  .hero .hero-grid .t3 { background: linear-gradient(160deg, var(--gold), var(--gold-deep)); }
+  .hero .hero-grid .t4 { background: linear-gradient(160deg, var(--brand), #8B5757); }
+  .hero .hero-grid .t5 { background: linear-gradient(160deg, #B0A290, #6B5F52); }
+  .hero .hero-grid .t6 { background: linear-gradient(160deg, #D6C8B8, #A89888); }
+  .hero .hero-grid .t7 { background: linear-gradient(160deg, #C9A876, #8B6F4D); }
+  .hero .hero-grid .t8 { background: linear-gradient(160deg, #E8D5CB, var(--brand)); }
+  @media (max-width: 900px) {
+    .hero .hero-grid { grid-template-columns: repeat(3, 1fr); }
+    .hero .hero-grid .ig { grid-column: span 3; grid-row: span 1; aspect-ratio: 16/9; }
+  }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+
+  /* Ticker */
+  .ticker {
+    background: var(--dark);
+    color: var(--bg);
+    padding: 0;
+    overflow: hidden;
+    border-top: 1px solid var(--gold-deep);
+    border-bottom: 1px solid var(--gold-deep);
+  }
+  .ticker-track {
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+    padding: 18px 0;
+    white-space: nowrap;
+    animation: tick 36s linear infinite;
+  }
+  .ticker-track span {
+    padding: 0 28px;
+    font-family: 'Instrument Serif', serif;
+    font-size: 24px;
+    font-style: italic;
+    color: var(--bg);
+  }
+  .ticker-track .gold { color: var(--gold); font-style: normal; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; }
+  @keyframes tick {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ====== Sections ====== */
+  section { padding: 100px 0; }
+  @media (max-width: 700px) { section { padding: 64px 0; } }
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  h2.section-h {
+    font-size: clamp(40px, 5.5vw, 76px);
+    line-height: 1;
+    max-width: 880px;
+  }
+
+  /* ====== Stat band ====== */
+  .stat-band {
+    background: var(--bg);
+    padding: 64px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+  @media (max-width: 900px) { .stat-grid { grid-template-columns: 1fr 1fr; gap: 24px; } }
+  .stat .n { font-family: 'Instrument Serif', serif; font-size: clamp(48px, 6vw, 84px); color: var(--dark); line-height: 0.9; letter-spacing: -0.02em; }
+  .stat .n em { color: var(--brand-deep); }
+  .stat .n .gold { color: var(--gold); font-style: italic; }
+  .stat .l { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-soft); margin-top: 12px; }
+
+  /* ====== Featured services ====== */
+  .featured { background: var(--surface); }
+  .featured-head { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; margin-bottom: 64px; }
+  @media (max-width: 900px) { .featured-head { grid-template-columns: 1fr; gap: 24px; } }
+  .featured-head p { color: var(--ink-soft); font-size: 16px; max-width: 520px; }
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+  @media (max-width: 900px) { .feature-grid { grid-template-columns: 1fr; } }
+  .fcard {
+    background: var(--dark);
+    color: var(--bg);
+    aspect-ratio: 3/4;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .fcard .img {
+    position: absolute; inset: 0;
+    opacity: 0.6; transition: opacity .4s ease, transform .6s ease;
+  }
+  .fcard:hover .img { opacity: 0.85; transform: scale(1.05); }
+  .fcard.acne .img { background: linear-gradient(160deg, var(--brand) 0%, #8B5757 100%); }
+  .fcard.brows .img { background: linear-gradient(160deg, var(--gold) 0%, var(--gold-deep) 100%); }
+  .fcard.facial .img { background: linear-gradient(160deg, #E8D5CB 0%, var(--brand-deep) 100%); }
+  .fcard .label { position: absolute; top: 24px; left: 24px; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 600; }
+  .fcard .num { position: absolute; top: 24px; right: 24px; font-family: 'Instrument Serif', serif; font-style: italic; font-size: 22px; color: var(--gold); }
+  .fcard .info { position: absolute; left: 24px; right: 24px; bottom: 24px; }
+  .fcard h3 { font-size: clamp(32px, 3vw, 44px); margin-bottom: 12px; line-height: 1.05; color: var(--bg); }
+  .fcard p { font-size: 14px; color: rgba(242, 238, 233, 0.85); margin: 0 0 18px; }
+  .fcard .arrow { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; color: var(--gold); border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
+
+  /* ====== Showcase: results ====== */
+  .results { background: var(--dark); color: var(--bg); }
+  .results .eyebrow { color: var(--gold); }
+  .results h2 { color: var(--bg); }
+  .results h2 .gold { color: var(--gold); font-style: italic; }
+  .results-head { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; margin-bottom: 64px; }
+  @media (max-width: 900px) { .results-head { grid-template-columns: 1fr; gap: 24px; } }
+  .results-head p { color: rgba(242, 238, 233, 0.7); font-size: 16px; max-width: 480px; }
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+  @media (max-width: 900px) { .results-grid { grid-template-columns: 1fr; } }
+  .rcard { background: var(--dark-2); }
+  .rcard .ba { display: grid; grid-template-columns: 1fr 1fr; }
+  .rcard .ba > div { aspect-ratio: 1; position: relative; }
+  .rcard .ba > div::before {
+    content: attr(data-l); position: absolute; top: 14px; left: 14px;
+    background: rgba(0,0,0,0.55); color: var(--bg); padding: 4px 10px;
+    font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600;
+  }
+  .rcard.r1 .b { background: linear-gradient(160deg, #8B7068 0%, #4E433A 100%); }
+  .rcard.r1 .a { background: linear-gradient(160deg, #E8D5CB 0%, #D18D8D 100%); }
+  .rcard.r2 .b { background: linear-gradient(160deg, #B09080 0%, #6E5C50 100%); }
+  .rcard.r2 .a { background: linear-gradient(160deg, #F3DDD2 0%, #B07474 100%); }
+  .rcard.r3 .b { background: linear-gradient(160deg, #A38B7C 0%, #5E4F44 100%); }
+  .rcard.r3 .a { background: linear-gradient(160deg, #E8D5CB 0%, #D18D8D 100%); }
+  .rcard .meta { padding: 24px 24px 28px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .rcard .meta .who { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 22px; color: var(--bg); }
+  .rcard .meta .when { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+  .results .cta-row { margin-top: 56px; text-align: center; }
+  .results .cta-row .micro { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(242, 238, 233, 0.5); margin-top: 16px; }
+
+  /* ====== Big quote ====== */
+  .quote-band {
+    background: var(--bg);
+    padding: 120px 0;
+    text-align: center;
+  }
+  .quote-band blockquote {
+    margin: 0 auto;
+    max-width: 1000px;
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(36px, 5vw, 64px);
+    line-height: 1.15;
+    color: var(--dark);
+    letter-spacing: -0.01em;
+  }
+  .quote-band blockquote em { color: var(--brand-deep); }
+  .quote-band .who { margin-top: 36px; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-soft); font-weight: 600; }
+  .quote-band .who b { color: var(--ink); }
+
+  /* ====== Method ====== */
+  .method { background: var(--surface); }
+  .method-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: 80px; align-items: center; }
+  @media (max-width: 900px) { .method-grid { grid-template-columns: 1fr; gap: 40px; } }
+  .method h2 { font-size: clamp(40px, 5vw, 64px); line-height: 1.05; }
+  .method h2 em { color: var(--brand-deep); }
+  .method p { color: var(--ink-soft); font-size: 16px; }
+  .method p + p { margin-top: 14px; }
+  .method-visual {
+    aspect-ratio: 4/5;
+    background:
+      linear-gradient(180deg, rgba(31,27,23,0) 60%, rgba(31,27,23,0.3) 100%),
+      linear-gradient(165deg, var(--gold) 0%, var(--gold-deep) 50%, #6E5535 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .method-visual::before {
+    content: ""; position: absolute; inset: 0;
+    background:
+      radial-gradient(circle at 25% 30%, rgba(255,255,255,0.25), transparent 40%),
+      radial-gradient(circle at 75% 70%, rgba(255,255,255,0.15), transparent 50%);
+  }
+  .method-visual .marker {
+    position: absolute;
+    background: rgba(31,27,23,0.85);
+    color: var(--bg);
+    padding: 12px 16px;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    backdrop-filter: blur(8px);
+  }
+  .method-visual .m1 { top: 32px; right: 32px; }
+  .method-visual .m2 { bottom: 32px; left: 32px; }
+  .method-visual .m3 { bottom: 32px; right: 32px; background: var(--brand); color: #fff; }
+  .method-steps { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 36px 0; }
+  .mstep { padding-top: 18px; border-top: 2px solid var(--dark); }
+  .mstep .n { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 22px; color: var(--brand-deep); }
+  .mstep .h { font-size: 15px; font-weight: 600; color: var(--dark); margin-top: 6px; }
+  .mstep .b { font-size: 13px; color: var(--ink-soft); margin-top: 4px; }
+
+  /* ====== Brand / About ====== */
+  .about { background: var(--bg); position: relative; overflow: hidden; }
+  .about-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 80px; align-items: center; }
+  @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; gap: 40px; } }
+  .about h2 { font-size: clamp(40px, 5.5vw, 72px); line-height: 1; }
+  .about h2 em { color: var(--brand-deep); }
+  .about h2 .gold { color: var(--gold); font-style: italic; }
+  .about p { color: var(--ink-soft); font-size: 16px; }
+  .about p + p { margin-top: 16px; }
+  .about-portrait {
+    aspect-ratio: 4/5;
+    background:
+      linear-gradient(180deg, rgba(31,27,23,0) 60%, rgba(31,27,23,0.4) 100%),
+      radial-gradient(circle at 40% 30%, rgba(255,255,255,0.4), transparent 50%),
+      linear-gradient(160deg, var(--brand) 0%, #8B5757 100%);
+    position: relative;
+  }
+  .about-portrait .stamp {
+    position: absolute;
+    top: 24px; left: 24px;
+    background: var(--gold);
+    color: var(--dark);
+    padding: 18px 22px;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  .about-portrait .stamp em { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 22px; text-transform: none; letter-spacing: 0; color: var(--dark); display: block; margin-top: 6px; }
+  .about-portrait .sign {
+    position: absolute;
+    bottom: 24px; right: 24px;
+    background: rgba(31,27,23,0.85);
+    color: var(--bg);
+    padding: 16px 20px;
+    backdrop-filter: blur(6px);
+    text-align: right;
+  }
+  .about-portrait .sign .name { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 22px; color: var(--gold); line-height: 1; }
+  .about-portrait .sign .role { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(242, 238, 233, 0.75); margin-top: 6px; font-weight: 600; }
+
+  /* ====== Instagram showcase (the big one) ====== */
+  .ig-show { background: var(--surface); padding-bottom: 60px; }
+  .ig-show-head { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; margin-bottom: 48px; }
+  @media (max-width: 900px) { .ig-show-head { grid-template-columns: 1fr; gap: 24px; } }
+  .ig-show .handle { font-family: 'Instrument Serif', serif; font-style: italic; font-size: clamp(40px, 4.5vw, 64px); color: var(--brand-deep); line-height: 1; }
+  .ig-show .handle a { color: inherit; }
+  .ig-show .follow {
+    display: inline-flex; align-items: center; gap: 12px;
+    background: var(--dark); color: var(--bg);
+    padding: 14px 22px; font-size: 12px; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+  }
+  .ig-show .follow .arrow { color: var(--gold); }
+  .ig-mega {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
+  @media (max-width: 900px) { .ig-mega { grid-template-columns: repeat(2, 1fr); } }
+  .ig-mega .tile { aspect-ratio: 1; position: relative; overflow: hidden; }
+  .ig-mega .tile::before {
+    content: attr(data-type);
+    position: absolute; top: 12px; left: 12px;
+    background: rgba(0,0,0,0.55); color: var(--bg);
+    padding: 4px 8px; font-size: 9px; font-weight: 600;
+    letter-spacing: 0.16em; text-transform: uppercase; backdrop-filter: blur(4px);
+  }
+  .ig-mega .tile.big { grid-column: span 2; grid-row: span 2; aspect-ratio: 1; }
+  .ig-mega .tile:nth-child(1) { background: linear-gradient(135deg, var(--brand) 0%, var(--brand-deep) 100%); }
+  .ig-mega .tile:nth-child(2) { background: linear-gradient(135deg, var(--gold), var(--gold-deep)); }
+  .ig-mega .tile:nth-child(3) { background: linear-gradient(135deg, #E8D5CB, #C9A188); }
+  .ig-mega .tile:nth-child(4) { background: linear-gradient(135deg, var(--dark-2), var(--dark)); }
+  .ig-mega .tile:nth-child(5) { background: linear-gradient(135deg, #D6C8B8, #A89888); }
+  .ig-mega .tile:nth-child(6) { background: linear-gradient(135deg, var(--brand), #E8D5CB); }
+  .ig-mega .tile:nth-child(7) { background: linear-gradient(135deg, var(--gold), #8B6F4D); }
+  .ig-mega .tile:nth-child(8) { background: linear-gradient(135deg, #B0998B, #6E5C50); }
+  @media (max-width: 900px) {
+    .ig-mega .tile.big { grid-column: span 2; grid-row: span 1; }
+  }
+
+  /* ====== FAQ + Visit ====== */
+  .faq-visit { background: var(--bg); }
+  .fv-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 80px; }
+  @media (max-width: 900px) { .fv-grid { grid-template-columns: 1fr; gap: 48px; } }
+  .faq-visit h2 { font-size: clamp(36px, 4.5vw, 56px); line-height: 1.05; margin-bottom: 32px; }
+  details {
+    border-bottom: 1px solid var(--line);
+    padding: 22px 0;
+    cursor: pointer;
+  }
+  details:first-of-type { border-top: 1px solid var(--line); }
+  details summary {
+    list-style: none;
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    font-family: 'Instrument Serif', serif;
+    font-size: 24px;
+    color: var(--dark);
+  }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::after { content: "+"; color: var(--gold-deep); font-size: 24px; font-family: 'Inter', sans-serif; font-weight: 300; }
+  details[open] summary::after { content: "−"; }
+  details p { margin: 14px 0 0; font-size: 15px; color: var(--ink-soft); }
+  .visit-card {
+    background: var(--dark);
+    color: var(--bg);
+    padding: 48px 40px;
+    position: sticky;
+    top: 100px;
+  }
+  .visit-card h3 { color: var(--bg); font-size: 32px; margin-bottom: 16px; }
+  .visit-card h3 em { color: var(--gold); }
+  .visit-card p { color: rgba(242, 238, 233, 0.75); font-size: 15px; margin: 0 0 24px; }
+  .visit-card .row { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-top: 1px solid rgba(242, 238, 233, 0.15); font-size: 14px; }
+  .visit-card .row .l { color: var(--gold); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; }
+  .visit-card .row:last-of-type { border-bottom: 1px solid rgba(242, 238, 233, 0.15); margin-bottom: 28px; }
+  .visit-card .actions { display: flex; flex-direction: column; gap: 10px; }
+  .visit-card .actions a { width: 100%; justify-content: center; }
+
+  /* ====== Footer ====== */
+  footer.site {
+    background: var(--dark);
+    color: var(--bg);
+    padding: 80px 0 32px;
+  }
+  .foot-head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    padding-bottom: 56px;
+    border-bottom: 1px solid #3a342f;
+    align-items: end;
+  }
+  @media (max-width: 900px) { .foot-head { grid-template-columns: 1fr; gap: 32px; } }
+  .foot-head h2 { font-family: 'Instrument Serif', serif; font-size: clamp(40px, 5vw, 72px); color: var(--bg); line-height: 1; }
+  .foot-head h2 em { color: var(--gold); }
+  .foot-head .actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
+  @media (max-width: 900px) { .foot-head .actions { justify-content: flex-start; } }
+  .foot-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr;
+    gap: 48px;
+    padding: 56px 0;
+    border-bottom: 1px solid #3a342f;
+  }
+  @media (max-width: 900px) { .foot-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+  @media (max-width: 600px) { .foot-grid { grid-template-columns: 1fr; } }
+  footer.site .col h4 { font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin: 0 0 18px; }
+  footer.site .col ul { list-style: none; padding: 0; margin: 0; }
+  footer.site .col li { font-size: 14px; color: rgba(242, 238, 233, 0.75); margin-bottom: 10px; }
+  footer.site .col li a:hover { color: var(--gold); }
+  footer.site .brand p { color: rgba(242, 238, 233, 0.75); font-size: 14px; margin: 0 0 16px; }
+  footer.site .brand .ig { color: var(--gold); font-family: 'Instrument Serif', serif; font-style: italic; font-size: 22px; }
+  .legal { padding-top: 28px; display: flex; justify-content: space-between; font-size: 12px; color: rgba(242, 238, 233, 0.5); flex-wrap: wrap; gap: 12px; }
+
+  /* Sticky mobile */
+  .sticky-mobile { display: none; }
+  @media (max-width: 900px) {
+    .sticky-mobile {
+      display: flex;
+      position: fixed; bottom: 0; left: 0; right: 0;
+      z-index: 200;
+      box-shadow: 0 -12px 30px -10px rgba(0,0,0,0.3);
+    }
+    .sticky-mobile a {
+      flex: 1; text-align: center; padding: 18px 12px;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+    }
+    .sticky-mobile a.call { background: var(--bg); color: var(--dark); border-top: 1px solid var(--line); }
+    .sticky-mobile a.book { background: var(--dark); color: var(--gold); }
+  }
+
+  /* Back link */
+  .back-link {
+    position: fixed; top: 14px; left: 14px; z-index: 200;
+    background: var(--gold); color: var(--dark);
+    padding: 8px 14px; font-size: 11px; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+  }
+  @media (max-width: 900px) { .back-link { top: auto; bottom: 70px; } }
+</style>
+</head>
+<body>
+
+<a class="back-link" href="index.html">← All concepts</a>
+
+<div class="util-bar">
+  <div class="wrap">
+    <div class="left">
+      <span>HUNTERSVILLE · CORNELIUS · CHARLOTTE</span>
+      <span>BY APPOINTMENT</span>
+    </div>
+    <div class="right">
+      <a href="tel:9804322968">(980) 432-2968</a>
+      <a href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener">@Aidaflores_aesthetics</a>
+      <a href="https://www.vagaro.com/aidafloresaesthetics/gift-certificates" target="_blank" rel="noopener">Gift cards</a>
+    </div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <div class="logo">AIDA FLORES<span class="accent"></span></div>
+    <nav class="primary">
+      <a href="acne-studio.html">Skin</a>
+      <a href="#brows">Brows & Lashes</a>
+      <a href="#facials">Facials</a>
+      <a href="#about">About</a>
+      <a href="#results">Results</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn dark small" href="https://www.vagaro.com/aidafloresaesthetics" target="_blank" rel="noopener">Book Now</a>
+      <button class="menu-toggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== HERO ====== -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-top">
+      <div>
+        <div class="badges">
+          <span class="pill"><span class="dot"></span>New booking dates · May</span>
+          <span>Face Reality · Certified</span>
+        </div>
+        <h1>Results <em>worth</em><br/><span class="gold">following.</span></h1>
+        <div class="hero-actions">
+          <a class="btn dark" href="https://www.vagaro.com/aidafloresaesthetics" target="_blank" rel="noopener">Book a service</a>
+          <a class="btn ghost" href="acne-studio.html">See acne results →</a>
+        </div>
+      </div>
+      <div class="meta-card">
+        <div class="ll">Trusted by</div>
+        <div class="num"><em>500+</em> clients</div>
+        <p>Across Huntersville, Cornelius, Charlotte & the greater Lake Norman area. Acne. Hydrofacials. Korean lashes. Brow lamination.</p>
+      </div>
+    </div>
+
+    <div class="hero-grid">
+      <div class="t1" data-label="Hydrofacial"></div>
+      <div class="t2" data-label="Brow lam"></div>
+      <div class="t3" data-label="Korean lashes"></div>
+      <div class="ig" data-label="Result · Week 14">
+        <!-- big tile -->
+      </div>
+      <div class="t4" data-label="Acne"></div>
+      <div class="t5" data-label="Dermaplane"></div>
+      <div class="t6" data-label="Peel"></div>
+      <div class="t7" data-label="Lash lift"></div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker">
+  <div class="ticker-track">
+    <span>"Honestly the best esthetician in Huntersville"</span><span class="gold">★★★★★</span>
+    <span>Face Reality Certified Acne Specialist</span><span class="gold">✦</span>
+    <span>Korean Lash Lift</span><span class="gold">✦</span>
+    <span>Brow Lamination</span><span class="gold">✦</span>
+    <span>"My skin has never looked like this"</span><span class="gold">★★★★★</span>
+    <span>Hydrofacial</span><span class="gold">✦</span>
+    <span>Chemical Peels</span><span class="gold">✦</span>
+    <span>"Honestly the best esthetician in Huntersville"</span><span class="gold">★★★★★</span>
+    <span>Face Reality Certified Acne Specialist</span><span class="gold">✦</span>
+    <span>Korean Lash Lift</span><span class="gold">✦</span>
+    <span>Brow Lamination</span><span class="gold">✦</span>
+    <span>"My skin has never looked like this"</span><span class="gold">★★★★★</span>
+    <span>Hydrofacial</span><span class="gold">✦</span>
+    <span>Chemical Peels</span><span class="gold">✦</span>
+  </div>
+</div>
+
+<!-- ====== Stats band ====== -->
+<div class="stat-band">
+  <div class="wrap">
+    <div class="stat-grid">
+      <div class="stat"><div class="n"><em>500+</em></div><div class="l">Clients cared for</div></div>
+      <div class="stat"><div class="n">4.9<span class="gold">★</span></div><div class="l">Average review</div></div>
+      <div class="stat"><div class="n">90<em>d</em></div><div class="l">Avg. Face Reality clearing</div></div>
+      <div class="stat"><div class="n">1:1</div><div class="l">Every appointment</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== FEATURED SERVICES ====== -->
+<section class="featured" id="facials">
+  <div class="wrap">
+    <div class="featured-head">
+      <div>
+        <div class="eyebrow">What we do best</div>
+        <h2 class="section-h">Three services. Done with <em>obsessive care</em>.</h2>
+      </div>
+      <div>
+        <p>Every service at the studio is performed by Aida — no rotating providers, no upselling, no rushed appointments. Pick the one that meets you where you are right now.</p>
+        <a class="btn ghost" href="#" style="margin-top: 24px;">Full menu →</a>
+      </div>
+    </div>
+
+    <div class="feature-grid">
+      <a class="fcard acne" href="acne-studio.html">
+        <div class="img"></div>
+        <div class="label">01 · Skin</div>
+        <div class="num">A.</div>
+        <div class="info">
+          <h3>Acne & Corrective</h3>
+          <p>Face Reality. Hydrofacials. Peels. Real clearing in 90 days.</p>
+          <span class="arrow">Explore →</span>
+        </div>
+      </a>
+      <a class="fcard brows" href="#brows" id="brows">
+        <div class="img"></div>
+        <div class="label">02 · Beauty</div>
+        <div class="num">B.</div>
+        <div class="info">
+          <h3>Brows & Lashes</h3>
+          <p>Korean lashes, brow lamination, brow tint, lash lift.</p>
+          <span class="arrow">Explore →</span>
+        </div>
+      </a>
+      <a class="fcard facial" href="#">
+        <div class="img"></div>
+        <div class="label">03 · Restore</div>
+        <div class="num">F.</div>
+        <div class="info">
+          <h3>Signature Facials</h3>
+          <p>An hour to fully exhale. Restorative, calming, results-led.</p>
+          <span class="arrow">Explore →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== RESULTS ====== -->
+<section class="results" id="results">
+  <div class="wrap">
+    <div class="results-head">
+      <div>
+        <div class="eyebrow">Real results</div>
+        <h2>The kind of work that <span class="gold">earns referrals.</span></h2>
+      </div>
+      <div>
+        <p>Every transformation below is a real Face Reality client photographed in the same studio light. No filters. No retouching. Shared with permission.</p>
+      </div>
+    </div>
+
+    <div class="results-grid">
+      <article class="rcard r1">
+        <div class="ba"><div class="b" data-l="Week 0"></div><div class="a" data-l="Week 14"></div></div>
+        <div class="meta"><div class="who">Lauren, 27</div><div class="when">Cystic · 14wk</div></div>
+      </article>
+      <article class="rcard r2">
+        <div class="ba"><div class="b" data-l="Week 0"></div><div class="a" data-l="Week 12"></div></div>
+        <div class="meta"><div class="who">Maddie, 19</div><div class="when">Hormonal · 12wk</div></div>
+      </article>
+      <article class="rcard r3">
+        <div class="ba"><div class="b" data-l="Week 0"></div><div class="a" data-l="Week 16"></div></div>
+        <div class="meta"><div class="who">Brianna, 34</div><div class="when">Adult · 16wk</div></div>
+      </article>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn gold" href="acne-studio.html">See more transformations →</a>
+      <div class="micro">More B/A available during in-studio consultation</div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Quote band ====== -->
+<section class="quote-band">
+  <div class="wrap">
+    <blockquote>"After eight dermatologists, three prescriptions and a thousand <em>Reddit threads</em> — Aida is the first person who actually changed my skin."</blockquote>
+    <div class="who"><b>LAUREN H.</b> · FACE REALITY CLIENT</div>
+  </div>
+</section>
+
+<!-- ====== METHOD ====== -->
+<section class="method">
+  <div class="wrap">
+    <div class="method-grid">
+      <div class="method-visual">
+        <div class="marker m1">METHOD</div>
+        <div class="marker m2">FACE REALITY · 90 DAYS</div>
+        <div class="marker m3">Result-driven</div>
+      </div>
+      <div>
+        <div class="eyebrow">The method</div>
+        <h2>Result-driven. <em>Relationship-led.</em></h2>
+        <p>Most studios sell you a treatment. Here, we build a plan — one that's specific to your skin, your life, and what you've already tried. Every visit gets you closer to a result you can actually maintain.</p>
+        <div class="method-steps">
+          <div class="mstep"><div class="n">01</div><div class="h">Consult</div><div class="b">A full read on your skin and history.</div></div>
+          <div class="mstep"><div class="n">02</div><div class="h">Plan</div><div class="b">Personal protocol, built for your life.</div></div>
+          <div class="mstep"><div class="n">03</div><div class="h">Treat</div><div class="b">Bi-weekly in-studio progress visits.</div></div>
+          <div class="mstep"><div class="n">04</div><div class="h">Maintain</div><div class="b">A routine you'll actually keep up.</div></div>
+        </div>
+        <a class="btn dark" href="acne-studio.html">Inside the method →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== ABOUT ====== -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <div class="eyebrow">Meet your esthetician</div>
+        <h2>The studio is just one person — <span class="gold">Aida.</span></h2>
+        <p>I'm a licensed esthetician and a Face Reality Certified Acne Specialist serving Huntersville, Cornelius, Charlotte, and the greater Lake Norman area. I built this studio so my clients could have the kind of skincare experience most people never get — slow, personal, evidence-led.</p>
+        <p>Most of my clients come through word of mouth and stay for years. That isn't an accident — it's because every appointment is just you, me, and a real plan for what we're working on together.</p>
+        <a class="btn ghost" href="#" style="margin-top: 20px;">My story →</a>
+      </div>
+      <div class="about-portrait">
+        <div class="stamp">Hi, I'm<em>Aida.</em></div>
+        <div class="sign">
+          <div class="name">Aida Flores</div>
+          <div class="role">Licensed Esthetician</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== INSTAGRAM showcase ====== -->
+<section class="ig-show">
+  <div class="wrap">
+    <div class="ig-show-head">
+      <div>
+        <div class="eyebrow">From the studio</div>
+        <div class="handle"><a href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener">@Aidaflores_aesthetics</a></div>
+      </div>
+      <div>
+        <a class="follow" href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener">Follow on Instagram <span class="arrow">→</span></a>
+      </div>
+    </div>
+    <div class="ig-mega">
+      <a class="tile big" data-type="Reel" href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener" aria-label="IG reel"></a>
+      <a class="tile" data-type="Post" href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener" aria-label="IG post"></a>
+      <a class="tile" data-type="Reel" href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener" aria-label="IG reel"></a>
+      <a class="tile" data-type="Post" href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener" aria-label="IG post"></a>
+      <a class="tile" data-type="Post" href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener" aria-label="IG post"></a>
+      <a class="tile" data-type="Reel" href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener" aria-label="IG reel"></a>
+      <a class="tile" data-type="Post" href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener" aria-label="IG post"></a>
+      <a class="tile" data-type="Reel" href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener" aria-label="IG reel"></a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FAQ + Visit ====== -->
+<section class="faq-visit">
+  <div class="wrap">
+    <div class="fv-grid">
+      <div>
+        <div class="eyebrow">Common questions</div>
+        <h2>Everything you need to know before booking.</h2>
+        <div class="faq-list">
+          <details open><summary>Where is the studio located?</summary><p>The studio is in the Huntersville / Lake Norman area, serving clients from Huntersville, Cornelius, Davidson, Mooresville, Concord, and greater Charlotte. Exact address and parking instructions are sent in your booking confirmation.</p></details>
+          <details><summary>How does the Face Reality Acne Program work?</summary><p>It's a 90-day, esthetician-guided journey. We start with a 60-minute consultation, then meet every two weeks for in-studio treatments while you follow a custom home-care routine. Most clients see meaningful clearing within 12 weeks.</p></details>
+          <details><summary>How long does a Korean lash lift last?</summary><p>4–6 weeks for most clients. We'll set the right rebooking cadence at your first visit based on your natural lash cycle.</p></details>
+          <details><summary>Do you take walk-ins?</summary><p>No — every appointment is by booking only so you have my full attention. The fastest way is through Vagaro. You can also call or DM and I'll respond within a business day.</p></details>
+          <details><summary>Do you offer gift cards?</summary><p>Yes — available instantly through Vagaro and emailed to the recipient. They can be used for any service.</p></details>
+        </div>
+      </div>
+      <aside class="visit-card">
+        <h3>Book your <em>visit</em>.</h3>
+        <p>Most appointments are booked 1–2 weeks out. Acne consultations release 4 weeks at a time — first-come.</p>
+        <div class="row"><span class="l">Location</span><span>Huntersville, NC</span></div>
+        <div class="row"><span class="l">Hours</span><span>Mon – Sat · by appt.</span></div>
+        <div class="row"><span class="l">Phone</span><span>(980) 432-2968</span></div>
+        <div class="row"><span class="l">Instagram</span><span>@Aidaflores_aesthetics</span></div>
+        <div class="actions">
+          <a class="btn gold" href="https://www.vagaro.com/aidafloresaesthetics" target="_blank" rel="noopener">Book on Vagaro</a>
+          <a class="btn ghost-light" href="https://www.vagaro.com/aidafloresaesthetics/gift-certificates" target="_blank" rel="noopener">Gift a session</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Footer ====== -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-head">
+      <h2>Skin you'll <em>actually love.</em></h2>
+      <div class="actions">
+        <a class="btn gold" href="https://www.vagaro.com/aidafloresaesthetics" target="_blank" rel="noopener">Book Now</a>
+        <a class="btn ghost-light" href="tel:9804322968">(980) 432-2968</a>
+      </div>
+    </div>
+    <div class="foot-grid">
+      <div class="col brand">
+        <h4>The Studio</h4>
+        <p>Aida Flores Aesthetics is a one-person, by-appointment skincare and brow/lash studio serving Huntersville, Cornelius, Charlotte, and the greater Lake Norman area.</p>
+        <p class="ig"><a href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener">@Aidaflores_aesthetics →</a></p>
+      </div>
+      <div class="col"><h4>Skin</h4><ul><li><a href="acne-studio.html">Acne & Corrective</a></li><li><a href="#">Hydrofacial</a></li><li><a href="#">Chemical Peels</a></li><li><a href="#">Dermaplane</a></li></ul></div>
+      <div class="col"><h4>Brows & Lashes</h4><ul><li><a href="#">Korean Lashes</a></li><li><a href="#">Lash Lift</a></li><li><a href="#">Brow Lamination</a></li><li><a href="#">Brow Wax + Tint</a></li></ul></div>
+      <div class="col"><h4>Visit</h4><ul><li>Huntersville, NC</li><li>Mon – Sat by appt.</li><li><a href="tel:9804322968">(980) 432-2968</a></li><li><a href="https://www.vagaro.com/aidafloresaesthetics/gift-certificates" target="_blank" rel="noopener">Gift Cards</a></li></ul></div>
+    </div>
+    <div class="legal">
+      <span>© 2026 AIDA FLORES AESTHETICS · HUNTERSVILLE, NC</span>
+      <span>SITE CONCEPT V1.0</span>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-mobile">
+  <a class="call" href="tel:9804322968">Call</a>
+  <a class="book" href="https://www.vagaro.com/aidafloresaesthetics" target="_blank" rel="noopener">Book Now</a>
+</div>
+
+</body>
+</html>

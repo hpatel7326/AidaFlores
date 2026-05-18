@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aida Flores Aesthetics — Website Concept Review</title>
+<meta name="description" content="Three website design concepts for Aida Flores Aesthetics. Review and share feedback." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #F8F5F0;
+    --surface: #FFFFFF;
+    --ink: #1E1A16;
+    --ink-soft: #5C534B;
+    --brand: #D18D8D;
+    --brand-deep: #A86E6E;
+    --line: #E6DFD5;
+  }
+  *,*::before,*::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.55;
+  }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+  header.top {
+    border-bottom: 1px solid var(--line);
+    padding: 22px 0;
+    background: var(--surface);
+  }
+  header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .brandmark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    letter-spacing: 0.04em;
+  }
+  .brandmark span { color: var(--brand-deep); }
+  .meta { font-size: 13px; color: var(--ink-soft); letter-spacing: 0.06em; text-transform: uppercase; }
+  section.intro { padding: 80px 0 56px; }
+  .eyebrow { font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brand-deep); margin-bottom: 18px; }
+  h1.display {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(40px, 6vw, 76px);
+    line-height: 1.05;
+    margin: 0 0 24px;
+    letter-spacing: -0.01em;
+  }
+  h1.display em { font-style: italic; color: var(--brand-deep); }
+  p.lede {
+    max-width: 720px;
+    font-size: 18px;
+    color: var(--ink-soft);
+    margin: 0 0 32px;
+  }
+  .notes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 40px;
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+  }
+  .notes .pair { font-size: 13px; }
+  .notes .pair b { display: block; text-transform: uppercase; letter-spacing: 0.12em; color: var(--ink-soft); font-weight: 500; font-size: 11px; margin-bottom: 4px; }
+  @media (max-width: 700px) { .notes { grid-template-columns: 1fr; } }
+  section.concepts { padding: 24px 0 96px; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  @media (max-width: 1000px) { .grid { grid-template-columns: 1fr; } }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -28px rgba(30,26,22,0.25); }
+  .preview {
+    aspect-ratio: 4/3;
+    position: relative;
+    overflow: hidden;
+  }
+  .preview .badge {
+    position: absolute; top: 16px; left: 16px;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(8px);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  /* Concept 1 preview — Atelier */
+  .preview.atelier { background: linear-gradient(165deg, #FBF8F3 0%, #EFE7D8 70%, #E1D2BC 100%); display: flex; align-items: center; justify-content: center; padding: 36px; }
+  .preview.atelier .mock {
+    width: 100%; height: 100%; background: #FBF8F3;
+    display: grid; grid-template-rows: auto 1fr; padding: 14px; gap: 12px; border-radius: 2px;
+    box-shadow: 0 10px 30px -16px rgba(30,26,22,0.25);
+  }
+  .preview.atelier .mock-nav { display: flex; justify-content: space-between; align-items: center; font-family: 'Cormorant Garamond', serif; font-size: 11px; letter-spacing: 0.1em; }
+  .preview.atelier .mock-nav .pill { background: #2A2520; color: #FBF8F3; padding: 4px 10px; font-size: 9px; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.14em; }
+  .preview.atelier .mock-hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 12px; }
+  .preview.atelier .copy { display: flex; flex-direction: column; justify-content: center; }
+  .preview.atelier .copy .hh { font-family: 'Cormorant Garamond', serif; font-size: 18px; line-height: 1.05; color: #2A2520; }
+  .preview.atelier .copy .hh em { color: #A86E6E; font-style: italic; }
+  .preview.atelier .copy .pp { font-size: 8px; color: #6B5F52; margin-top: 6px; line-height: 1.5; }
+  .preview.atelier .copy .btn { margin-top: 10px; font-size: 8px; background: #2A2520; color: #FBF8F3; padding: 6px 10px; align-self: flex-start; letter-spacing: 0.16em; text-transform: uppercase; }
+  .preview.atelier .photo { background: linear-gradient(160deg, #D18D8D 0%, #B07474 100%); border-radius: 2px; position: relative; }
+  .preview.atelier .photo::after { content: ""; position: absolute; inset: auto 0 0 0; height: 40%; background: linear-gradient(transparent, rgba(0,0,0,0.15)); }
+
+  /* Concept 2 preview — Sanctuary */
+  .preview.sanctuary { background: linear-gradient(170deg, #EFE7DB 0%, #DCD4C0 60%, #B8C5A6 100%); display: flex; align-items: center; justify-content: center; padding: 36px; }
+  .preview.sanctuary .mock {
+    width: 100%; height: 100%; background: #F4EEE3;
+    display: grid; grid-template-rows: auto 1fr; padding: 14px; gap: 12px; border-radius: 16px;
+    box-shadow: 0 10px 30px -16px rgba(60,50,40,0.25);
+  }
+  .preview.sanctuary .mock-nav { display: flex; justify-content: space-between; align-items: center; font-family: 'Fraunces', serif; font-size: 11px; }
+  .preview.sanctuary .mock-nav .pill { background: #5C4A3F; color: #F4EEE3; padding: 4px 10px; font-size: 9px; border-radius: 999px; }
+  .preview.sanctuary .mock-hero { display: grid; grid-template-rows: 1fr auto; gap: 8px; }
+  .preview.sanctuary .photo { background: radial-gradient(circle at 30% 30%, #E8D5CB 0%, #D18D8D 70%, #A86E6E 100%); border-radius: 12px; }
+  .preview.sanctuary .copy .hh { font-family: 'Fraunces', serif; font-size: 14px; color: #3D2F26; line-height: 1.1; }
+  .preview.sanctuary .copy .hh em { color: #5C4A3F; font-style: italic; }
+  .preview.sanctuary .copy .pp { font-size: 8px; color: #6B5F52; margin-top: 4px; }
+  .preview.sanctuary .copy .btn { display: inline-block; margin-top: 8px; font-size: 8px; background: #D18D8D; color: #fff; padding: 5px 12px; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.12em; }
+
+  /* Concept 3 preview — Studio */
+  .preview.studio { background: linear-gradient(180deg, #1F1B17 0%, #2E2823 100%); display: flex; align-items: center; justify-content: center; padding: 36px; }
+  .preview.studio .mock {
+    width: 100%; height: 100%; background: #F2EEE9;
+    display: grid; grid-template-rows: auto 1fr; padding: 14px; gap: 12px; border-radius: 2px;
+    box-shadow: 0 10px 30px -16px rgba(0,0,0,0.4);
+  }
+  .preview.studio .mock-nav { display: flex; justify-content: space-between; align-items: center; font-size: 10px; font-weight: 600; letter-spacing: 0.06em; }
+  .preview.studio .mock-nav .pill { background: #1F1B17; color: #F2EEE9; padding: 4px 10px; font-size: 9px; border-radius: 0; text-transform: uppercase; letter-spacing: 0.14em; }
+  .preview.studio .mock-hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 8px; }
+  .preview.studio .copy { display: flex; flex-direction: column; justify-content: flex-end; }
+  .preview.studio .copy .hh { font-family: 'Instrument Serif', serif; font-size: 22px; color: #1F1B17; line-height: 0.95; }
+  .preview.studio .copy .hh em { color: #C9A876; }
+  .preview.studio .copy .pp { font-size: 8px; color: #5C534B; margin-top: 6px; }
+  .preview.studio .copy .btn { margin-top: 8px; font-size: 8px; background: #C9A876; color: #1F1B17; padding: 6px 12px; align-self: flex-start; text-transform: uppercase; letter-spacing: 0.18em; font-weight: 600; }
+  .preview.studio .grid-photos { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 4px; }
+  .preview.studio .grid-photos div { background: linear-gradient(135deg, #D18D8D, #B07474); }
+  .preview.studio .grid-photos div:nth-child(2) { background: linear-gradient(135deg, #C9A876, #A88656); }
+  .preview.studio .grid-photos div:nth-child(3) { background: linear-gradient(135deg, #5C534B, #2E2823); }
+  .preview.studio .grid-photos div:nth-child(4) { background: linear-gradient(135deg, #E8D5CB, #D18D8D); }
+
+  .card-body { padding: 28px 28px 32px; flex: 1; display: flex; flex-direction: column; }
+  .card-body h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 30px;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  .card-body .sub { font-size: 13px; color: var(--brand-deep); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 14px; }
+  .card-body p { color: var(--ink-soft); font-size: 15px; margin: 0 0 20px; }
+  .card-body ul.swatches { list-style: none; padding: 0; margin: 0 0 22px; display: flex; gap: 8px; }
+  .swatches li { width: 24px; height: 24px; border-radius: 999px; border: 1px solid rgba(0,0,0,0.06); }
+  .actions { margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 20px;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: 1px solid var(--ink);
+    transition: background .2s, color .2s;
+  }
+  .btn.primary { background: var(--ink); color: var(--bg); }
+  .btn.primary:hover { background: var(--brand-deep); border-color: var(--brand-deep); }
+  .btn.ghost:hover { background: var(--ink); color: var(--bg); }
+  .resources {
+    padding: 56px 0 96px;
+    border-top: 1px solid var(--line);
+  }
+  .resources h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 34px;
+    margin: 0 0 10px;
+  }
+  .resources p { color: var(--ink-soft); max-width: 560px; margin: 0 0 28px; }
+  .res-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 700px) { .res-grid { grid-template-columns: 1fr; } }
+  .res {
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .res h3 { margin: 0 0 4px; font-size: 18px; font-weight: 500; }
+  .res p { margin: 0; font-size: 13px; color: var(--ink-soft); }
+  .res .arrow { font-size: 22px; color: var(--brand-deep); }
+  footer.bottom { padding: 32px 0; border-top: 1px solid var(--line); font-size: 13px; color: var(--ink-soft); text-align: center; background: var(--surface); }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brandmark">Aida Flores Aesthetics <span>· concept review</span></div>
+    <div class="meta">Prepared for Aida · v1.0</div>
+  </div>
+</header>
+
+<section class="intro">
+  <div class="wrap">
+    <div class="eyebrow">A new home for your studio</div>
+    <h1 class="display">Three directions for a website that finally <em>feels like you.</em></h1>
+    <p class="lede">Each concept below is a real, working mockup of your homepage — built around local SEO, mobile-first booking, and the warmth your clients already feel in your studio. Click into any concept to explore it on desktop or mobile. Take your time and tell us which direction feels most like the Aida Flores Aesthetics you're building.</p>
+
+    <div class="notes">
+      <div class="pair"><b>What's the same across all three</b>Face Reality positioning, Vagaro booking flow, Instagram integration, Huntersville NC local SEO, and your brand blush <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#D18D8D;vertical-align:middle;margin:0 4px;"></span> #D18D8D as accent.</div>
+      <div class="pair"><b>What's different</b>The personality. The pacing. How prominently we lead with acne expertise vs. brows & lashes vs. social proof.</div>
+      <div class="pair"><b>How to give feedback</b>Open each one. Note what feels right and what doesn't — palette, tone, hero copy, anything. There are no wrong answers; this is the round where we choose a direction.</div>
+    </div>
+  </div>
+</section>
+
+<section class="concepts">
+  <div class="wrap">
+    <div class="grid">
+
+      <article class="card">
+        <div class="preview atelier">
+          <span class="badge">Concept 01</span>
+          <div class="mock">
+            <div class="mock-nav"><span>Aida Flores</span><span class="pill">Book</span></div>
+            <div class="mock-hero">
+              <div class="copy">
+                <div class="hh">Corrective skincare, <em>truly personal.</em></div>
+                <div class="pp">Face Reality Certified · Huntersville, NC</div>
+                <div class="btn">Begin your skin journey</div>
+              </div>
+              <div class="photo"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="sub">Elevated · Corrective · Editorial</div>
+          <h3>Atelier</h3>
+          <p>The skincare-specialist direction. Quiet, magazine-like, and built around your Face Reality acne authority. Best if you want clients to feel they're booking with the corrective expert in the area — not just a facial.</p>
+          <ul class="swatches">
+            <li style="background:#FBF8F3"></li>
+            <li style="background:#EFE7D8"></li>
+            <li style="background:#D6C8B8"></li>
+            <li style="background:#D18D8D"></li>
+            <li style="background:#2A2520"></li>
+          </ul>
+          <div class="actions">
+            <a class="btn primary" href="concept-atelier.html">View concept →</a>
+            <a class="btn ghost" href="acne-atelier.html">See service page</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="preview sanctuary">
+          <span class="badge">Concept 02</span>
+          <div class="mock">
+            <div class="mock-nav"><span style="font-style:italic;">Aida Flores</span><span class="pill">Book</span></div>
+            <div class="mock-hero">
+              <div class="photo"></div>
+              <div class="copy">
+                <div class="hh">Your skin, <em>cared for.</em></div>
+                <div class="pp">A warm, personal studio in Huntersville.</div>
+                <span class="btn">Schedule</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="sub">Warm · Wellness · Relationship-driven</div>
+          <h3>Sanctuary</h3>
+          <p>The relationship direction. Softer shapes, warmer palette, more conversational. Best if you want the site to feel like an extension of how clients already describe your studio — calming, personal, never rushed.</p>
+          <ul class="swatches">
+            <li style="background:#F4EEE3"></li>
+            <li style="background:#E8D5CB"></li>
+            <li style="background:#B8C5A6"></li>
+            <li style="background:#D18D8D"></li>
+            <li style="background:#5C4A3F"></li>
+          </ul>
+          <div class="actions">
+            <a class="btn primary" href="concept-sanctuary.html">View concept →</a>
+            <a class="btn ghost" href="acne-sanctuary.html">See service page</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="preview studio">
+          <span class="badge">Concept 03</span>
+          <div class="mock">
+            <div class="mock-nav"><span>AIDA FLORES</span><span class="pill">Book</span></div>
+            <div class="mock-hero">
+              <div class="copy">
+                <div class="hh">Results <em>worth</em> following.</div>
+                <div class="pp">Brows. Lashes. Skin. Huntersville, NC.</div>
+                <span class="btn">Book now</span>
+              </div>
+              <div class="grid-photos"><div></div><div></div><div></div><div></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="sub">Visual-first · Modern · Social-forward</div>
+          <h3>Studio</h3>
+          <p>The Instagram-forward direction. More contrast, transformations front and center, the most visual of the three. Best if brows/lashes growth and social proof are the priority — without losing the elevated feel.</p>
+          <ul class="swatches">
+            <li style="background:#F2EEE9"></li>
+            <li style="background:#C9A876"></li>
+            <li style="background:#D18D8D"></li>
+            <li style="background:#5C534B"></li>
+            <li style="background:#1F1B17"></li>
+          </ul>
+          <div class="actions">
+            <a class="btn primary" href="concept-studio.html">View concept →</a>
+            <a class="btn ghost" href="acne-studio.html">See service page</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="resources">
+  <div class="wrap">
+    <h2>The thinking behind these</h2>
+    <p>Two reference docs walk through the design system and the SEO/content strategy in plain language. Optional reading — they're here if you want the why.</p>
+    <div class="res-grid">
+      <a class="res" href="design-system.html">
+        <div>
+          <h3>Design System Reference</h3>
+          <p>Palettes, typography, components & spacing for each concept.</p>
+        </div>
+        <div class="arrow">→</div>
+      </a>
+      <a class="res" href="seo-strategy.html">
+        <div>
+          <h3>SEO & Content Strategy</h3>
+          <p>Local keyword map, page hierarchy, Google Business optimization, blog roadmap.</p>
+        </div>
+        <div class="arrow">→</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="bottom">
+  <div class="wrap">Aida Flores Aesthetics · Huntersville, NC · (980) 432-2968 · <a href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener">@Aidaflores_aesthetics</a></div>
+</footer>
+
+</body>
+</html>
