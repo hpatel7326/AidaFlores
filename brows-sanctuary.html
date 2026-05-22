@@ -73,7 +73,13 @@
   .hero .blob.b1 { width: 460px; height: 460px; background: var(--brand); top: -100px; right: -100px; }
   .hero .blob.b2 { width: 300px; height: 300px; background: var(--sage); bottom: -100px; left: -80px; opacity: 0.3; }
   .hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 64px; align-items: center; position: relative; z-index: 1; }
-  @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; gap: 40px; } }
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+    section.hero { padding: 24px 0 60px; }
+    .hero .image { aspect-ratio: 4/4.2; max-height: 400px; border-radius: 160px 160px 16px 16px; }
+    h1 { font-size: clamp(34px, 8vw, 56px); }
+    .hero p.lede { font-size: 16px; }
+  }
   .eyebrow { font-family: 'Fraunces', serif; font-style: italic; color: var(--brand-deep); font-size: 16px; margin-bottom: 16px; }
   h1 { font-size: clamp(40px, 5.5vw, 76px); line-height: 1.05; margin-bottom: 24px; }
   .hero p.lede { font-size: 18px; color: var(--ink-2); max-width: 520px; margin: 0 0 32px; }
@@ -190,8 +196,9 @@
   .sticky-mobile { display: none; }
   @media (max-width: 900px) { .sticky-mobile { display: flex; position: fixed; bottom: 14px; left: 14px; right: 14px; z-index: 200; gap: 10px; border-radius: 999px; overflow: hidden; box-shadow: 0 14px 30px -10px rgba(60,50,40,0.4); } .sticky-mobile a { flex: 1; text-align: center; padding: 16px; font-size: 13px; font-weight: 500; } .sticky-mobile .call { background: var(--surface); color: var(--ink); border-radius: 999px 0 0 999px; } .sticky-mobile .book { background: var(--brand); color: #fff; border-radius: 0 999px 999px 0; } }
 
-  .back-link { position: fixed; top: 14px; left: 14px; z-index: 200; background: var(--surface); padding: 8px 16px; border-radius: 999px; font-size: 12px; color: var(--ink); border: 1px solid var(--line); }
-  @media (max-width: 900px) { .back-link { top: auto; bottom: 84px; } }
+  .back-link { position: fixed; top: 14px; left: 14px; z-index: 200; background: rgba(253, 250, 244, 0.92); backdrop-filter: blur(8px); padding: 8px 16px; border-radius: 999px; font-size: 12px; color: var(--ink); border: 1px solid var(--line); }
+  @media (max-width: 900px) { .back-link { top: auto; bottom: 84px; padding: 7px 13px; font-size: 11px; } }
+  @media (max-width: 600px) { .back-link { display: none; } }
 </style>
 </head>
 <body>
@@ -234,6 +241,7 @@
     <a href="concept-sanctuary.html#facials">Facials</a>
     <a href="concept-sanctuary.html#about">About Aida</a>
     <a href="concept-sanctuary.html">Home</a>
+    <a href="index.html" style="font-size: 14px; font-family: 'DM Sans', sans-serif; color: var(--ink-soft); margin-top: 8px;">← All concepts (review)</a>
   </nav>
   <div class="drawer-actions">
     <a class="btn blush" href="https://www.vagaro.com/akesthetics/services" target="_blank" rel="noopener">Book a visit</a>

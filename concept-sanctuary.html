@@ -226,9 +226,15 @@
     box-shadow: 0 8px 24px -10px rgba(60,50,40,0.3);
   }
   @media (max-width: 900px) {
-    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-    section.hero { padding: 40px 0 60px; }
-    .hero .image-wrap { max-height: 540px; border-radius: 180px 180px 16px 16px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+    section.hero { padding: 32px 0 56px; }
+    .hero .image-wrap { aspect-ratio: 4/4.2; max-height: 420px; border-radius: 160px 160px 16px 16px; }
+    .hero h1 { font-size: clamp(36px, 9vw, 56px); }
+    .hero p.lede { font-size: 16px; }
+    .hero .image-wrap .badge { width: 76px; height: 76px; font-size: 10px; }
+    .hero .image-wrap .stamp { padding: 12px 14px; max-width: 200px; }
+    .hero .image-wrap .stamp .big { font-size: 15px; }
+    .hero .meta-line { gap: 18px; font-size: 12px; }
   }
 
   /* ====== Marquee strip ====== */
@@ -236,29 +242,32 @@
     background: var(--ink);
     color: var(--bg);
     overflow: hidden;
-    white-space: nowrap;
-    line-height: 1;
+    display: flex;
+    width: 100%;
   }
   .marquee-track {
-    display: inline-flex;
+    display: flex;
+    flex-shrink: 0;
     align-items: center;
     gap: 48px;
-    padding: 24px 0;
-    animation: scroll 36s linear infinite;
+    padding: 22px 0;
+    white-space: nowrap;
+    animation: scroll 38s linear infinite;
+    will-change: transform;
   }
   .marquee span {
     font-family: 'Fraunces', serif;
     font-style: italic;
     font-size: 22px;
-    line-height: 1.4;
+    line-height: 1;
     color: var(--bg);
-    display: inline-block;
+    flex-shrink: 0;
   }
-  .marquee .dot { color: var(--brand); font-style: normal; opacity: 0.6; font-size: 18px; }
+  .marquee .dot { color: var(--brand); font-style: normal; opacity: 0.6; font-size: 18px; line-height: 1; }
   @media (max-width: 600px) {
-    .marquee-track { gap: 32px; padding: 20px 0; }
-    .marquee span { font-size: 18px; }
-    .marquee .dot { font-size: 14px; }
+    .marquee-track { gap: 28px; padding: 18px 0; }
+    .marquee span { font-size: 16px; }
+    .marquee .dot { font-size: 13px; }
   }
   @keyframes scroll {
     from { transform: translateX(0); }
@@ -598,8 +607,9 @@
   }
 
   /* Back link */
-  .back-link { position: fixed; top: 14px; left: 14px; z-index: 200; background: var(--surface); padding: 8px 16px; border-radius: 999px; font-size: 12px; color: var(--ink); border: 1px solid var(--line); }
-  @media (max-width: 900px) { .back-link { top: auto; bottom: 84px; } }
+  .back-link { position: fixed; top: 14px; left: 14px; z-index: 200; background: rgba(253, 250, 244, 0.92); backdrop-filter: blur(8px); padding: 8px 16px; border-radius: 999px; font-size: 12px; color: var(--ink); border: 1px solid var(--line); }
+  @media (max-width: 900px) { .back-link { top: auto; bottom: 84px; padding: 7px 13px; font-size: 11px; } }
+  @media (max-width: 600px) { .back-link { display: none; } }
 </style>
 </head>
 <body>
@@ -650,6 +660,7 @@
     <a href="#facials">Facials</a>
     <a href="#about">About Aida</a>
     <a href="#visit">Visit</a>
+    <a href="index.html" style="font-size: 14px; font-family: 'DM Sans', sans-serif; color: var(--ink-soft); margin-top: 8px;">← All concepts (review)</a>
   </nav>
   <div class="drawer-actions">
     <a class="btn blush" href="https://www.vagaro.com/akesthetics/services" target="_blank" rel="noopener">Book a visit</a>
