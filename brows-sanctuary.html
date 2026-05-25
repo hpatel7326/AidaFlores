@@ -161,6 +161,17 @@
   .look.l3 .img { background: linear-gradient(165deg, var(--sage), var(--sage-deep)); }
   .look.l4 .img { background: linear-gradient(165deg, #D18D8D, #E8D5CB); }
   .look .q { padding: 12px 18px 0; font-family: 'Fraunces', serif; font-style: italic; font-size: 15px; color: var(--ink); }
+  /* Instagram (Studio Days) */
+  .ig { background: var(--surface); padding: 80px 0; }
+  .ig-head { text-align: center; }
+  .ig-head h2 { font-size: clamp(32px, 4vw, 46px); }
+  .ig-head .handle { display: inline-block; margin-top: 14px; padding: 8px 18px; background: var(--brand); color: #fff; border-radius: 999px; font-size: 13px; letter-spacing: 0.04em; }
+  .ig-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-top: 48px; }
+  @media (max-width: 900px) { .ig-grid { grid-template-columns: repeat(3, 1fr); } }
+  .ig-tile { aspect-ratio: 1; border-radius: 16px; overflow: hidden; position: relative; background-color: var(--pink); background-size: cover; background-position: center; transition: transform .35s ease, box-shadow .35s ease; }
+  .ig-tile:hover { transform: translateY(-3px); box-shadow: 0 18px 30px -18px rgba(60, 50, 40, 0.4); }
+  .ig-tile.reel::after { content: "\25B6"; position: absolute; top: 10px; right: 10px; width: 28px; height: 28px; background: rgba(0,0,0,0.55); color: #fff; font-size: 10px; border-radius: 999px; display: flex; align-items: center; justify-content: center; padding-left: 2px; backdrop-filter: blur(4px); }
+
 
   /* FAQ */
   .faq { background: var(--bg); }
@@ -229,6 +240,7 @@
   <div class="wrap">
     <a class="logo" href="index.html"><span class="name"><span>Aida</span> Flores</span><small>AKA Skin & Beauty</small></a>
     <nav class="primary">
+      <a href="/">Home</a>
       <a href="brows-sanctuary.html" class="active">Brows & Lashes</a>
       <a href="acne-sanctuary.html">Skin</a>
       <a href="index.html#facials">Facials</a>
@@ -438,6 +450,29 @@
       <div class="look l2"><div class="img" data-l="Korean lashes"></div><div class="q">"Mascara-optional, every day."</div></div>
       <div class="look l3"><div class="img" data-l="Wax + tint"></div><div class="q">"The shape I never knew I had."</div></div>
       <div class="look l4"><div class="img" data-l="Lift + tint"></div><div class="q">"Lifted, clean — never harsh."</div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== STUDIO DAYS ON INSTAGRAM ====== -->
+<section class="ig">
+  <div class="wrap">
+    <div class="ig-head">
+      <div class="eyebrow">— follow along</div>
+      <h2>Studio days on Instagram.</h2>
+      <a class="handle" href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener">@Aidaflores_aesthetics</a>
+    </div>
+    <div class="ig-grid">
+      <a class="ig-tile" href="https://www.instagram.com/aidaflores_aesthetics/p/DYqGdJYkQkU/?img_index=3" target="_blank" rel="noopener" aria-label="View on Instagram" style="background-image: url('ig/post-1.jpg');"></a>
+      <a class="ig-tile" href="https://www.instagram.com/aidaflores_aesthetics/p/DYDkkdBRXnN/" target="_blank" rel="noopener" aria-label="View on Instagram" style="background-image: url('ig/post-2.jpg');"></a>
+      <a class="ig-tile" href="https://www.instagram.com/p/Cyd4O4iuqZM/" target="_blank" rel="noopener" aria-label="View on Instagram" style="background-image: url('ig/post-3.jpg');"></a>
+      <a class="ig-tile" href="https://www.instagram.com/p/CyWF7MEuU1i/" target="_blank" rel="noopener" aria-label="View on Instagram" style="background-image: url('ig/post-4.jpg');"></a>
+      <a class="ig-tile reel" href="https://www.instagram.com/p/C-BkVWBJW0d/" target="_blank" rel="noopener" aria-label="View Reel on Instagram" style="background-image: url('ig/post-5.jpg');"></a>
+      <a class="ig-tile" href="https://www.instagram.com/p/DYNt0l6Eajx/?img_index=3" target="_blank" rel="noopener" aria-label="View on Instagram" style="background-image: url('ig/post-6.jpg');"></a>
+    </div>
+    <div style="text-align: center; margin-top: 40px;">
+      <a class="btn outline" href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener">View full feed on Instagram →</a>
     </div>
   </div>
 </section>
