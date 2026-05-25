@@ -243,14 +243,15 @@
     color: var(--bg);
     overflow: hidden;
     display: flex;
+    align-items: center;
     width: 100%;
+    min-height: 80px;
   }
   .marquee-track {
     display: flex;
     flex-shrink: 0;
     align-items: center;
     gap: 48px;
-    padding: 22px 0;
     white-space: nowrap;
     animation: scroll 38s linear infinite;
     will-change: transform;
@@ -259,13 +260,15 @@
     font-family: 'Fraunces', serif;
     font-style: italic;
     font-size: 22px;
-    line-height: 1;
+    line-height: 1.5;
     color: var(--bg);
     flex-shrink: 0;
+    display: block;
   }
-  .marquee .dot { color: var(--brand); font-style: normal; opacity: 0.6; font-size: 18px; line-height: 1; }
+  .marquee .dot { color: var(--brand); font-style: normal; opacity: 0.6; font-size: 18px; line-height: 1.5; }
   @media (max-width: 600px) {
-    .marquee-track { gap: 28px; padding: 18px 0; }
+    .marquee { min-height: 64px; }
+    .marquee-track { gap: 28px; }
     .marquee span { font-size: 16px; }
     .marquee .dot { font-size: 13px; }
   }
