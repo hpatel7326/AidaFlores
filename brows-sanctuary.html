@@ -212,7 +212,8 @@
   .legal { padding-top: 24px; display: flex; justify-content: space-between; font-size: 12px; color: var(--ink-soft); flex-wrap: wrap; }
 
   .sticky-mobile { display: none; }
-  @media (max-width: 900px) { .sticky-mobile { display: flex; position: fixed; bottom: 12px; left: 12px; right: 12px; z-index: 200; gap: 8px; } .sticky-mobile a { flex: 1; text-align: center; padding: 14px 4px; font-size: 13px; font-weight: 500; border-radius: 999px; box-shadow: 0 10px 24px -10px rgba(60,50,40,0.35); } .sticky-mobile .call { background: var(--surface); color: var(--ink); } .sticky-mobile .text { background: var(--surface); color: var(--ink); } .sticky-mobile .book { background: var(--brand); color: #fff; } }
+  @media (max-width: 900px) { .sticky-mobile { display: flex; position: fixed; bottom: 10px; left: 10px; right: 10px; z-index: 150; gap: 6px; opacity: 1; pointer-events: auto; transition: opacity .2s ease, transform .2s ease; } .sticky-mobile a { flex: 1; text-align: center; padding: 10px 4px; font-size: 12px; font-weight: 500; border-radius: 999px; box-shadow: 0 8px 20px -10px rgba(60,50,40,0.32); backdrop-filter: blur(6px); } .sticky-mobile .call { background: rgba(253, 250, 244, 0.92); color: var(--ink); } .sticky-mobile .text { background: rgba(253, 250, 244, 0.92); color: var(--ink); } .sticky-mobile .book { background: var(--brand); color: #fff; } }
+  body.drawer-open .sticky-mobile { opacity: 0; pointer-events: none; transform: translateY(20px); }
 
   .back-link { position: fixed; top: 14px; left: 14px; z-index: 200; background: rgba(253, 250, 244, 0.92); backdrop-filter: blur(8px); padding: 8px 16px; border-radius: 999px; font-size: 12px; color: var(--ink); border: 1px solid var(--line); }
   @media (max-width: 900px) { .back-link { top: auto; bottom: 84px; padding: 7px 13px; font-size: 11px; } }
