@@ -593,17 +593,18 @@
   .sticky-mobile { display: none; }
   @media (max-width: 900px) {
     .sticky-mobile {
-      display: flex; position: fixed; bottom: 14px; left: 14px; right: 14px;
-      z-index: 200; gap: 10px;
-      border-radius: 999px; overflow: hidden;
-      box-shadow: 0 14px 30px -10px rgba(60,50,40,0.4);
+      display: flex; position: fixed; bottom: 12px; left: 12px; right: 12px;
+      z-index: 200; gap: 8px;
     }
     .sticky-mobile a {
-      flex: 1; text-align: center; padding: 16px;
+      flex: 1; text-align: center; padding: 14px 4px;
       font-size: 13px; font-weight: 500;
+      border-radius: 999px;
+      box-shadow: 0 10px 24px -10px rgba(60,50,40,0.35);
     }
-    .sticky-mobile .call { background: var(--surface); color: var(--ink); border-radius: 999px 0 0 999px; }
-    .sticky-mobile .book { background: var(--brand); color: #fff; border-radius: 0 999px 999px 0; }
+    .sticky-mobile .call { background: var(--surface); color: var(--ink); }
+    .sticky-mobile .text { background: var(--surface); color: var(--ink); }
+    .sticky-mobile .book { background: var(--brand); color: #fff; }
   }
 
   /* Back link */
@@ -668,7 +669,8 @@
   </div>
   <div class="drawer-meta">
     Huntersville, NC · Lake Norman<br/>
-    <a href="tel:9804322968">(980) 432-2968</a> · <a href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener">@Aidaflores_aesthetics</a>
+    <a href="tel:9804322968">Call</a> · <a href="sms:9804322968">Text</a> · <a href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener">@Aidaflores_aesthetics</a><br/>
+    <span style="font-size: 12px; opacity: 0.8;">(980) 432-2968</span>
   </div>
 </aside>
 
@@ -988,7 +990,8 @@
     <p>Book online, give us a call, or send a DM. Every appointment starts the same way: a real conversation about you.</p>
     <div class="visit-actions">
       <a class="btn blush" href="https://www.vagaro.com/akesthetics/services" target="_blank" rel="noopener">Book on Vagaro</a>
-      <a class="btn outline" style="border-color: var(--bg); color: var(--bg);" href="tel:9804322968">Call (980) 432-2968</a>
+      <a class="btn outline" style="border-color: var(--bg); color: var(--bg);" href="tel:9804322968">Call</a>
+      <a class="btn outline" style="border-color: var(--bg); color: var(--bg);" href="sms:9804322968">Text</a>
     </div>
     <div class="info">
       <div><h4>Studio</h4><p>Huntersville, North Carolina<br/>Address shared at booking</p></div>
@@ -1009,7 +1012,7 @@
       </div>
       <div class="col"><h4>Care</h4><ul><li><a href="brows-sanctuary.html">Brows & Lashes</a></li><li><a href="acne-sanctuary.html">Skin & Acne</a></li><li><a href="#facials">Signature Facials</a></li></ul></div>
       <div class="col"><h4>Studio</h4><ul><li><a href="#about">About Aida</a></li><li><a href="#stories">Skin Stories</a></li><li><a href="https://www.vagaro.com/akesthetics/gift-certificates" target="_blank" rel="noopener">Gift Cards</a></li></ul></div>
-      <div class="col"><h4>Visit</h4><ul><li>Huntersville, NC</li><li>Mon–Sat by appointment</li><li><a href="tel:9804322968">(980) 432-2968</a></li><li><a href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener">@Aidaflores_aesthetics</a></li></ul></div>
+      <div class="col"><h4>Visit</h4><ul><li>Huntersville, NC</li><li>Mon–Sat by appointment</li><li><a href="tel:9804322968">Call (980) 432-2968</a></li><li><a href="sms:9804322968">Text (980) 432-2968</a></li><li><a href="https://www.instagram.com/Aidaflores_aesthetics/" target="_blank" rel="noopener">@Aidaflores_aesthetics</a></li></ul></div>
     </div>
     <div class="legal">
       <span>© 2026 Aida Flores · AKA Skin & Beauty</span>
@@ -1020,7 +1023,8 @@
 
 <div class="sticky-mobile">
   <a class="call" href="tel:9804322968">Call</a>
-  <a class="book" href="https://www.vagaro.com/akesthetics/services" target="_blank" rel="noopener">Book a visit</a>
+  <a class="text" href="sms:9804322968">Text</a>
+  <a class="book" href="https://www.vagaro.com/akesthetics/services" target="_blank" rel="noopener">Book</a>
 </div>
 
 <script>
