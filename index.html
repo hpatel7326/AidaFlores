@@ -200,14 +200,17 @@
     color: var(--ink-soft);
   }
   .hero .meta-line b { color: var(--ink); font-weight: 500; }
+  .hero .image-frame { position: relative; }
   .hero .image-wrap {
     position: relative;
     aspect-ratio: 4/5;
     border-radius: 240px 240px 24px 24px;
     overflow: hidden;
-    background:
-      radial-gradient(circle at 35% 30%, rgba(255,255,255,0.35), transparent 50%),
-      linear-gradient(165deg, #E8D5CB 0%, #D18D8D 60%, #A86E6E 100%);
+    background-color: #E8D5CB;
+    background-image: url('img/aida-studio.jpg');
+    background-size: cover;
+    background-position: 50% 42%;
+    background-repeat: no-repeat;
   }
   .hero .image-wrap .stamp {
     position: absolute;
@@ -220,13 +223,14 @@
   }
   .hero .image-wrap .stamp .small { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brand-deep); margin-bottom: 4px; }
   .hero .image-wrap .stamp .big { font-family: 'Fraunces', serif; font-style: italic; font-size: 17px; color: var(--ink); line-height: 1.35; }
-  .hero .image-wrap .badge {
+  .hero .image-frame .badge {
     position: absolute;
-    top: 20px; left: 20px;
+    top: 6px; left: -6px;
+    z-index: 2;
     width: 92px; height: 92px;
     background: var(--surface);
     border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
     text-align: center;
     font-family: 'Fraunces', serif;
     font-size: 11px;
@@ -242,7 +246,7 @@
     .hero .image-wrap { aspect-ratio: 4/4.2; max-height: 420px; border-radius: 160px 160px 16px 16px; }
     .hero h1 { font-size: clamp(36px, 9vw, 56px); }
     .hero p.lede { font-size: 16px; }
-    .hero .image-wrap .badge { width: 76px; height: 76px; font-size: 10px; }
+    .hero .image-frame .badge { width: 76px; height: 76px; font-size: 10px; }
     .hero .image-wrap .stamp { padding: 12px 14px; max-width: 200px; }
     .hero .image-wrap .stamp .big { font-size: 15px; }
     .hero .meta-line { gap: 18px; font-size: 12px; }
@@ -354,6 +358,14 @@
     overflow: hidden;
   }
   .scard:hover { transform: translateY(-6px); box-shadow: 0 30px 60px -36px rgba(60,50,40,0.3); }
+  .scard .shot {
+    margin: -40px -32px 26px;
+    aspect-ratio: 16/9;
+    background-color: var(--pink);
+    background-size: cover;
+    background-position: center;
+  }
+  @media (max-width: 900px) { .scard .shot { margin: -40px -24px 22px; } }
   .scard .icon {
     width: 68px; height: 68px;
     border-radius: 50%;
@@ -482,9 +494,11 @@
   .about .portrait {
     aspect-ratio: 4/5;
     border-radius: 240px 240px 24px 24px;
-    background:
-      radial-gradient(circle at 35% 30%, rgba(255,255,255,0.4), transparent 50%),
-      linear-gradient(160deg, #E8D5CB 0%, #D18D8D 60%, #A86E6E 100%);
+    background-color: #E8D5CB;
+    background-image: url('img/aida-portrait.jpg');
+    background-size: cover;
+    background-position: 50% 40%;
+    background-repeat: no-repeat;
     position: relative;
   }
   .about .portrait .accent {
@@ -528,6 +542,42 @@
   .test .who b { color: var(--ink); font-weight: 500; }
 
   /* ====== Instagram ====== */
+  /* ====== The work (craft strip) ====== */
+  .craft { background: var(--surface); }
+  .craft-head { text-align: center; max-width: 660px; margin: 0 auto 56px; }
+  .craft-head p { color: var(--ink-2); margin-top: 18px; font-size: 16px; }
+  .craft-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .craft-step .shot {
+    aspect-ratio: 4/5;
+    border-radius: 18px;
+    overflow: hidden;
+    background-color: var(--pink);
+    background-size: cover;
+    background-position: center;
+    transition: transform .35s ease, box-shadow .35s ease;
+  }
+  .craft-step:hover .shot { transform: translateY(-3px); box-shadow: 0 18px 30px -18px rgba(60,50,40,0.35); }
+  .craft-step .n {
+    display: inline-block;
+    margin-top: 18px;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--brand-deep);
+  }
+  .craft-step h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 19px;
+    color: var(--ink);
+    margin-top: 4px;
+  }
+  .craft-step p { font-size: 14px; color: var(--ink-2); margin-top: 6px; line-height: 1.6; }
+  @media (max-width: 900px) {
+    .craft-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .craft-head { margin-bottom: 36px; }
+    .craft-step h3 { font-size: 17px; }
+    .craft-step p { font-size: 13px; }
+  }
   .ig { background: var(--surface); padding-bottom: 80px; }
   .ig-head { text-align: center; }
   .ig-head h2 { font-size: clamp(32px, 4vw, 46px); }
@@ -737,12 +787,14 @@
           <div><b>1:1</b> appointments only</div>
         </div>
       </div>
-      <div class="image-wrap">
-        <div class="badge">Welcome,<br/><em>friend</em></div>
-        <div class="stamp">
-          <div class="small">A note from Aida</div>
-          <div class="big">"Your brows deserve the time we take with them."</div>
+      <div class="image-frame">
+        <div class="image-wrap">
+          <div class="stamp">
+            <div class="small">A note from Aida</div>
+            <div class="big">"Your brows deserve the time we take with them."</div>
+          </div>
         </div>
+        <div class="badge">Welcome,<br/><em>friend</em></div>
       </div>
     </div>
   </div>
@@ -776,7 +828,7 @@
 
     <div class="services-grid two-up">
       <div class="scard one" id="brows">
-        <div class="icon">B</div>
+        <div class="shot" style="background-image: url('img/service-brows.jpg');" role="img" aria-label="Shaped and tinted brows"></div>
         <h3>Brows</h3>
         <p>Natural enhancement that fits your features and lasts the way it should — mapped to your face, never a template.</p>
         <ul>
@@ -788,7 +840,7 @@
       </div>
 
       <div class="scard two">
-        <div class="icon">L</div>
+        <div class="shot" style="background-image: url('img/service-lashes.jpg');" role="img" aria-label="Lifted lashes, eyes closed"></div>
         <h3>Lashes</h3>
         <p>The lift you can't believe is your own lashes. Low-maintenance, mascara-optional, and made to be repeated.</p>
         <ul>
@@ -797,6 +849,43 @@
           <li>Add-on: Tint <span class="price">+$15</span></li>
         </ul>
         <a class="more" href="https://www.vagaro.com/akesthetics/services" target="_blank" rel="noopener">Book lashes →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== THE WORK ====== -->
+<section class="craft">
+  <div class="wrap">
+    <div class="craft-head">
+      <div class="eyebrow-small">— how it works</div>
+      <h2 class="section-h">Mapped to your face, <em>never a template.</em></h2>
+      <p>Every set of brows starts the same way: measuring yours, not copying someone else's.</p>
+    </div>
+    <div class="craft-grid">
+      <div class="craft-step">
+        <div class="shot" style="background-image: url('img/craft-1-map.jpg');" role="img" aria-label="Mapping brows to the face with a measuring thread"></div>
+        <span class="n">Step one</span>
+        <h3>We map</h3>
+        <p>Your bone structure and symmetry decide the shape — measured before anything is removed.</p>
+      </div>
+      <div class="craft-step">
+        <div class="shot" style="background-image: url('img/craft-2-wax.jpg');" role="img" aria-label="Waxing along the mapped brow line"></div>
+        <span class="n">Step two</span>
+        <h3>We shape</h3>
+        <p>Wax and tweeze to the map, taking only what the shape actually needs.</p>
+      </div>
+      <div class="craft-step">
+        <div class="shot" style="background-image: url('img/craft-3-tint.jpg');" role="img" aria-label="Applying brow tint"></div>
+        <span class="n">Step three</span>
+        <h3>We finish</h3>
+        <p>Tint or lamination matched to your colouring and how much upkeep you want.</p>
+      </div>
+      <div class="craft-step">
+        <div class="shot" style="background-image: url('img/craft-4-result.jpg');" role="img" aria-label="Brows before and after shaping"></div>
+        <span class="n">Before &amp; after</span>
+        <h3>You leave</h3>
+        <p>Fuller where it counts, still unmistakably your own brows.</p>
       </div>
     </div>
   </div>
